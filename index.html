@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kustom Signs - Custom Signs Tailored to Perfection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #FFC400;
+        }
+
+        .custom-gradient {
+            background: radial-gradient(circle at top, rgba(255, 196, 0, 0.05), transparent 60%),
+                linear-gradient(180deg, #000000 0%, #0d0d00 100%);
+        }
+
+        .animate-fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .custom-shadow {
+            box-shadow: 0 0 30px rgba(255, 196, 0, 0.15);
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+
+        /* Stats styles */
+        .stats-item {
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .stats-item::before {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            background: radial-gradient(circle at 100% 100%, transparent 0%, rgba(255, 196, 0, 0.1) 100%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .stats-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #000000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+
+        /* Mobile menu styles */
+        .mobile-menu {
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Animation classes */
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+
+        .hero-element {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        /* Add these styles to your existing style section */
+        .faq-button span:last-child {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-content {
+            overflow: hidden;
+        }
+
+        /* Optional hover effect for FAQ buttons */
+        .faq-button:hover span:first-child {
+            color: var(--primary-color);
+        }
+
+        /* Active state for FAQ button */
+        .faq-button.active span:last-child {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="custom-gradient min-h-screen text-white font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20162200-9GlKKj2GJUm9PtNuE6H95fEj5v1mvU.png"
+                        alt="Kustom Signs" class="w-12 h-12 rounded-full">
+                    <span class="text-xl font-bold text-yellow-500">KustomSigns</span>
+                </div>
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#home"
+                        class="text-white hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors">Home</a>
+                    <a href="#products"
+                        class="text-white hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors">Products</a>
+                    <a href="#gallery"
+                        class="text-white hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors">Gallery</a>
+                    <a href="#about"
+                        class="text-white hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                    <a href="#contact"
+                        class="bg-yellow-500 text-black px-6 py-2 rounded-md text-sm font-medium hover:bg-yellow-400 transition-all duration-300 hover:shadow-lg">
+                        Contact Us
+                    </a>
+                </div>
+                <button class="lg:hidden text-white focus:outline-none" id="menuButton">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-16 6h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Stats -->
+    <section id="home" class="relative min-h-screen pt-32 overflow-hidden">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
+                <!-- Hero Content -->
+                <div class="space-y-8">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight hero-element">
+                        ALL ABOUT CUSTOM SIGNS - IT'S ALL HERE
+                    </h1>
+                    <p class="text-yellow-500 text-xl sm:text-2xl font-medium hero-element">
+                        A business without a sign is a sign of no business
+                    </p>
+                    <div class="space-y-6">
+                        <p class="text-gray-300 text-lg hero-element">
+                            The Best Sign for your shop is a SIGN that is:<br>
+                            Fast, Easy and Simple
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 hero-element">
+                            <button
+                                class="bg-yellow-500 text-black px-8 py-3 rounded-md font-medium hover:bg-yellow-400 transition-all duration-300 hover:shadow-lg">
+                                Contact Now
+                            </button>
+                            <button
+                                class="border-2 border-yellow-500 text-yellow-500 px-8 py-3 rounded-md font-medium hover:bg-yellow-500/10 transition-all duration-300">
+                                See more →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Images -->
+                <div class="relative w-full h-[500px] hero-element">
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20162200-9GlKKj2GJUm9PtNuE6H95fEj5v1mvU.png"
+                            alt="Main Sign"
+                            class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
+                    </div>
+                    <div class="absolute top-0 right-0 w-48 h-48">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20162200-9GlKKj2GJUm9PtNuE6H95fEj5v1mvU.png"
+                            alt="Sign Example"
+                            class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-48 h-48">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20162200-9GlKKj2GJUm9PtNuE6H95fEj5v1mvU.png"
+                            alt="Sign Example"
+                            class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="flex flex-wrap justify-center gap-8 mt-8 mb-16">
+                <div
+                    class="stats-item bg-black/40 backdrop-blur-sm rounded-full p-8 text-center w-[140px] h-[140px] flex flex-col items-center justify-center border border-yellow-500/30 custom-shadow">
+                    <div class="text-yellow-500 font-bold text-3xl counter" data-value="90">0</div>
+                    <div class="text-gray-400 text-sm mt-2">k+ Partners</div>
+                </div>
+                <div
+                    class="stats-item bg-black/40 backdrop-blur-sm rounded-full p-8 text-center w-[140px] h-[140px] flex flex-col items-center justify-center border border-yellow-500/30 custom-shadow">
+                    <div class="text-yellow-500 font-bold text-3xl counter" data-value="40">0</div>
+                    <div class="text-gray-400 text-sm mt-2">k+ Daily Users</div>
+                </div>
+                <div
+                    class="stats-item bg-black/40 backdrop-blur-sm rounded-full p-8 text-center w-[140px] h-[140px] flex flex-col items-center justify-center border border-yellow-500/30 custom-shadow">
+                    <div class="text-yellow-500 font-bold text-3xl counter" data-value="70">0</div>
+                    <div class="text-gray-400 text-sm mt-2">k+ Users</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rest of your sections remain the same -->
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-black/30">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="max-w-4xl mx-auto bg-yellow-500/5 rounded-xl p-8 border border-yellow-500/20 custom-shadow hover-scale">
+                <h2 class="text-3xl font-bold mb-8 text-center">Custom Signs Tailored to Perfection</h2>
+                <div class="space-y-6 text-gray-300 leading-relaxed">
+                    <p>
+                        UKustom Signs LLC is a company with more than 22 years experience, we can help you from scratch
+                        to
+                        final sign installed and connected to electricity. We can create from simple banner - coming
+                        soon to
+                        a great channel letter sign, any size any color and design.
+                    </p>
+                    <p>
+                        We are specialized in:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 ml-4">
+                        <li>Channel Letters</li>
+                        <li>LED Signs</li>
+                        <li>Banners</li>
+                        <li>Transformers</li>
+                        <li>LED Lights</li>
+                    </ul>
+                    <p>
+                        We are licensed and insured with a team of professionals and quality products, just the best on
+                        materials. We always try to make the best for our customers, and not always has means the more
+                        expensive product or sign, let us know what you need and we will give you the best option based
+                        on
+                        the best of our experience on the publicity Sign Marketers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Our Products</h2>
+                <p class="text-gray-300">Discover our range of professional signage solutions</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Cards -->
+                <div
+                    class="bg-black/30 rounded-xl overflow-hidden border border-yellow-500/20 custom-shadow hover-scale">
+                    <div class="image-hover h-48">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20165240-cSCiWXdja2Pz2zRJEZq4ScGG731nIT.png"
+                            alt="Channel Letters" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Channel Letters</h3>
+                        <p class="text-gray-300 mb-4">Custom-made dimensional letters for maximum visibility</p>
+                        <button class="text-yellow-500 hover:text-yellow-400 transition-colors">
+                            Learn More →
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-black/30 rounded-xl overflow-hidden border border-yellow-500/20 custom-shadow hover-scale">
+                    <div class="image-hover h-48">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20165240-cSCiWXdja2Pz2zRJEZq4ScGG731nIT.png"
+                            alt="LED Signs" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">LED Signs</h3>
+                        <p class="text-gray-300 mb-4">Energy-efficient illuminated displays</p>
+                        <button class="text-yellow-500 hover:text-yellow-400 transition-colors">
+                            Learn More →
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-black/30 rounded-xl overflow-hidden border border-yellow-500/20 custom-shadow hover-scale">
+                    <div class="image-hover h-48">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20165240-cSCiWXdja2Pz2zRJEZq4ScGG731nIT.png"
+                            alt="Custom Banners" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Custom Banners</h3>
+                        <p class="text-gray-300 mb-4">High-quality printed banners for any occasion</p>
+                        <button class="text-yellow-500 hover:text-yellow-400 transition-colors">
+                            Learn More →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-black/30">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Our Gallery</h2>
+                <p class="text-gray-300">Take a look at our recent projects</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Gallery Items -->
+                <div
+                    class="group relative aspect-square rounded-xl overflow-hidden border-2 border-yellow-500 custom-shadow">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20165240-cSCiWXdja2Pz2zRJEZq4ScGG731nIT.png"
+                        alt="Gallery Image 1"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button
+                            class="bg-yellow-500 text-black px-6 py-2 rounded-md font-medium transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            View Project
+                        </button>
+                    </div>
+                </div>
+                <!-- Repeat for other gallery items -->
+                <div
+                    class="group relative aspect-square rounded-xl overflow-hidden border-2 border-yellow-500 custom-shadow">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20165240-cSCiWXdja2Pz2zRJEZq4ScGG731nIT.png"
+                        alt="Gallery Image 2"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button
+                            class="bg-yellow-500 text-black px-6 py-2 rounded-md font-medium transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            View Project
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="group relative aspect-square rounded-xl overflow-hidden border-2 border-yellow-500 custom-shadow">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20165240-cSCiWXdja2Pz2zRJEZq4ScGG731nIT.png"
+                        alt="Gallery Image 3"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button
+                            class="bg-yellow-500 text-black px-6 py-2 rounded-md font-medium transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                            View Project
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- FAQ Content -->
+                <div class="bg-black/30 rounded-xl p-8 border border-yellow-500/20 custom-shadow">
+                    <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+                    <p class="text-yellow-500 mb-8">Find answers to common questions</p>
+                    <div class="space-y-4" id="faqAccordion">
+                        <!-- FAQ Items -->
+                        <div class="border-b border-yellow-500/20">
+                            <button class="w-full py-4 flex justify-between items-center text-left faq-button">
+                                <span class="text-white hover:text-yellow-500">How much does design cost?</span>
+                                <span class="transform transition-transform duration-300">▼</span>
+                            </button>
+                            <div class="faq-content hidden pb-4">
+                                <p class="text-gray-400">Contact us for a custom quote tailored to your specific needs.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-yellow-500/20">
+                            <button class="w-full py-4 flex justify-between items-center text-left faq-button">
+                                <span class="text-white hover:text-yellow-500">Do you fix lights or replace
+                                    lamps?</span>
+                                <span class="transform transition-transform duration-300">▼</span>
+                            </button>
+                            <div class="faq-content hidden pb-4">
+                                <p class="text-gray-400">Yes, we provide comprehensive repair and replacement services.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-yellow-500/20">
+                            <button class="w-full py-4 flex justify-between items-center text-left faq-button">
+                                <span class="text-white hover:text-yellow-500">What payment methods do you
+                                    accept?</span>
+                                <span class="transform transition-transform duration-300">▼</span>
+                            </button>
+                            <div class="faq-content hidden pb-4">
+                                <p class="text-gray-400">We accept multiple payment methods including credit cards and
+                                    PayPal.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-black/30 rounded-xl p-8 border border-yellow-500/20 custom-shadow">
+                    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+                    <p class="text-yellow-500 mb-8">Get in touch with our team</p>
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input type="text" placeholder="First Name"
+                                class="w-full bg-black/50 border border-yellow-500/20 rounded-md px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 transition-colors"
+                                required>
+                            <input type="text" placeholder="Last Name"
+                                class="w-full bg-black/50 border border-yellow-500/20 rounded-md px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 transition-colors"
+                                required>
+                        </div>
+                        <input type="email" placeholder="Email Address"
+                            class="w-full bg-black/50 border border-yellow-500/20 rounded-md px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 transition-colors"
+                            required>
+                        <textarea placeholder="Your Message" rows="4"
+                            class="w-full bg-black/50 border border-yellow-500/20 rounded-md px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 transition-colors"
+                            required></textarea>
+                        <button type="submit"
+                            class="w-full bg-yellow-500 text-black py-3 rounded-md font-medium hover:bg-yellow-400 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/50 border-t border-yellow-500/20 py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20162200-9GlKKj2GJUm9PtNuE6H95fEj5v1mvU.png"
+                            alt="Kustom Signs" class="w-12 h-12">
+                        <span class="font-bold text-lg">KustomSigns</span>
+                    </div>
+                    <p class="text-gray-400">Creating impactful signage solutions since 2001</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-yellow-500 transition-colors">About Us</a>
+                        </li>
+                        <li><a href="#products"
+                                class="text-gray-400 hover:text-yellow-500 transition-colors">Products</a>
+                        </li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-yellow-500 transition-colors">Gallery</a>
+                        </li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-yellow-500 transition-colors">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and special offers.</p>
+                    <form class="flex gap-2">
+                        <input type="email" placeholder="Your Email"
+                            class="flex-1 bg-black/50 border border-yellow-500/20 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 transition-colors">
+                        <button
+                            class="bg-yellow-500 text-black px-6 py-2 rounded-md font-medium hover:bg-yellow-400 transition-colors">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-12 pt-8 border-t border-yellow-500/20 text-center text-gray-400">
+                <p>&copy; 2024 KustomSigns. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize GSAP
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Elements Animation
+        const heroElements = gsap.utils.toArray('.hero-element');
+        gsap.set(heroElements, { opacity: 0, y: 20 });
+
+        const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+        tl.to(heroElements, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.2
+        });
+
+        // Stats Animation
+        gsap.from('.stats-item', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: '.stats-item',
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-value'));
+
+            gsap.to(counter, {
+                textContent: target,
+                duration: 2,
+                ease: "power1.inOut",
+                snap: { textContent: 1 },
+                scrollTrigger: {
+                    trigger: counter,
+                    start: "top 80%",
+                    onEnter: () => counter.textContent = "0"
+                }
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/95', 'backdrop-blur-sm');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('bg-black/95', 'backdrop-blur-sm');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+
+        // Mobile Menu
+        const menuButton = document.getElementById('menuButton');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        menuButton?.addEventListener('click', () => {
+            mobileMenu?.classList.toggle('active');
+        });
+
+        // Section Animations
+        const animateFrom = (elem, direction) => {
+            direction = direction || 1;
+            let x = 0,
+                y = direction * 100;
+            if (elem.classList.contains('reveal-left')) {
+                x = -100;
+                y = 0;
+            } else if (elem.classList.contains('reveal-right')) {
+                x = 100;
+                y = 0;
+            }
+
+            gsap.fromTo(elem, {
+                x: x,
+                y: y,
+                autoAlpha: 0
+            }, {
+                duration: 1.25,
+                x: 0,
+                y: 0,
+                autoAlpha: 1,
+                ease: "expo",
+                overwrite: "auto"
+            });
+        }
+
+        gsap.utils.toArray('.reveal-left, .reveal-right').forEach((elem) => {
+            ScrollTrigger.create({
+                trigger: elem,
+                onEnter: () => animateFrom(elem),
+                onEnterBack: () => animateFrom(elem, -1),
+                once: true
+            });
+        });
+    </script>
+    <script>
+        // Animate sections on scroll
+        document.querySelectorAll('section').forEach((section, index) => {
+            gsap.from(section, {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 80%",
+                    end: "top 20%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+    </script>
+    <!-- Replace the Stats Animation script with this optimized version -->
+    <script>
+        // Stats and Counter Animation
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animate stats immediately without ScrollTrigger
+            gsap.to('.stats-item', {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                stagger: 0.2,
+                delay: 1 // Delay after hero animation
+            });
+
+            // Counter Animation
+            const counters = document.querySelectorAll('[data-value]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-value'));
+                gsap.to(counter, {
+                    textContent: target,
+                    duration: 2,
+                    delay: 1.5, // Start after stats appear
+                    snap: { textContent: 1 },
+                    ease: "power1.inOut"
+                });
+            });
+        });
+
+        // Optimize FAQ animations
+        const faqButtons = document.querySelectorAll('.faq-button');
+        const faqContents = new Map(); // Store content heights
+
+        // Pre-calculate heights
+        document.addEventListener('DOMContentLoaded', () => {
+            faqButtons.forEach(button => {
+                const content = button.nextElementSibling;
+                content.classList.remove('hidden');
+                faqContents.set(content, content.offsetHeight);
+                content.classList.add('hidden');
+            });
+        });
+
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const arrow = button.querySelector('span:last-child');
+                const isOpen = !content.classList.contains('hidden');
+                const height = faqContents.get(content);
+
+                // Close other FAQs
+                faqButtons.forEach(otherButton => {
+                    if (otherButton !== button) {
+                        const otherContent = otherButton.nextElementSibling;
+                        const otherArrow = otherButton.querySelector('span:last-child');
+
+                        if (!otherContent.classList.contains('hidden')) {
+                            gsap.timeline()
+                                .to(otherContent, {
+                                    height: 0,
+                                    opacity: 0,
+                                    duration: 0.2,
+                                    ease: "power2.inOut",
+                                    onComplete: () => otherContent.classList.add('hidden')
+                                })
+                                .to(otherArrow, {
+                                    rotation: 0,
+                                    duration: 0.2,
+                                    ease: "power2.inOut"
+                                }, "<");
+                        }
+                    }
+                });
+
+                if (!isOpen) {
+                    content.classList.remove('hidden');
+                    content.style.height = '0px';
+
+                    gsap.timeline()
+                        .to(content, {
+                            height: height,
+                            opacity: 1,
+                            duration: 0.2,
+                            ease: "power2.inOut"
+                        })
+                        .to(arrow, {
+                            rotation: 180,
+                            duration: 0.2,
+                            ease: "power2.inOut"
+                        }, "<");
+                } else {
+                    gsap.timeline()
+                        .to(content, {
+                            height: 0,
+                            opacity: 0,
+                            duration: 0.2,
+                            ease: "power2.inOut",
+                            onComplete: () => {
+                                content.classList.add('hidden');
+                                content.style.height = '';
+                            }
+                        })
+                        .to(arrow, {
+                            rotation: 0,
+                            duration: 0.2,
+                            ease: "power2.inOut"
+                        }, "<");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
