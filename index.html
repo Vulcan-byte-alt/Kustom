@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
     <title>Kustom Signs - Custom Signs Tailored to Perfection</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -11,6 +12,17 @@
     <style>
         :root {
             --primary-color: #FFC400;
+            /* Primary Colors */
+            --gold: #D4AF37;
+            --gold-light: #E5C76B;
+            --gold-dark: #B69121;
+
+            /* Updated Neutral Colors */
+            --black: #000000;
+            --dark-navy: #0A1929;
+            --navy: #132F4C;
+            --white: #FFFFFF;
+            --off-white: #F8F9FA;
         }
 
         .custom-gradient {
@@ -47,6 +59,19 @@
         .stats-item {
             transition: transform 0.3s ease;
             position: relative;
+            background: rgba(255, 196, 0, 0.1);
+            border: 2px solid rgba(255, 196, 0, 0.3);
+            border-radius: 50%;
+            width: 120px;
+            /* Reduced size */
+            height: 120px;
+            /* Reduced size */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5rem;
+            /* Reduced margin */
         }
 
         .stats-item::before {
@@ -107,7 +132,38 @@
             transform: translateY(20px);
         }
 
-        /* Add these styles to your existing style section */
+        /* Gallery Card Styles */
+        .gallery-card {
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 196, 0, 0.2);
+            transition: all 0.3s ease;
+            border-radius: 0.75rem;
+            /* rounded-lg */
+            overflow: hidden;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 196, 0, 0.1);
+        }
+
+        /* Contact Form */
+        .contact-form input,
+        .contact-form textarea {
+            background: var(--dark-navy);
+            border: 1px solid var(--gold);
+            color: var(--black);
+            border-radius: 1rem;
+            padding: 1rem;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--gold-light);
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+
+        /* FAQ Styles */
         .faq-button span:last-child {
             transition: transform 0.3s ease;
         }
@@ -116,14 +172,41 @@
             overflow: hidden;
         }
 
-        /* Optional hover effect for FAQ buttons */
         .faq-button:hover span:first-child {
             color: var(--primary-color);
         }
 
-        /* Active state for FAQ button */
         .faq-button.active span:last-child {
             transform: rotate(180deg);
+        }
+
+        /* Testimonial Styles */
+        .testimonial-card {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 196, 0, 0.2);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            color: #fff;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 196, 0, 0.1);
+        }
+
+        /* Updated Buttons */
+        .gradient-button {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--black);
+            font-weight: 600;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .gradient-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
         }
     </style>
 </head>
@@ -134,8 +217,7 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center gap-3">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20162200-9GlKKj2GJUm9PtNuE6H95fEj5v1mvU.png"
-                        alt="Kustom Signs" class="w-12 h-12 rounded-full">
+                    <img src="logo.png" alt="Kustom Signs" class="w-12 h-12 ">
                     <span class="text-xl font-bold text-yellow-500">KustomSigns</span>
                 </div>
                 <div class="hidden lg:flex items-center gap-8">
@@ -190,54 +272,59 @@
                             </button>
                         </div>
                     </div>
+                    <!-- Stats Section -->
+                    <div class="flex flex-wrap justify-center gap-8 mt-8 mb-16 mr-24">
+                        <div class="stats-item">
+                            <div class="text-yellow-500 font-bold text-2xl counter" data-value="22">0k+</div>
+                            <div class="text-gray-300 text-sm text-center mt-1">Years of Experience</div>
+                        </div>
+                        <div class="stats-item">
+                            <div class="text-yellow-500 font-bold text-2xl counter" data-value="888">0k+</div>
+                            <div class="text-gray-300 text-sm text-center mt-1">Satisfied Clients</div>
+                        </div>
+                        <div class="stats-item">
+                            <div class="text-yellow-500 font-bold text-2xl counter" data-value="33">0k+</div>
+                            <div class="text-gray-300 text-sm text-center mt-1">Products</div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Hero Images -->
-                <div class="relative w-full h-[500px] hero-element">
-                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20162200-9GlKKj2GJUm9PtNuE6H95fEj5v1mvU.png"
-                            alt="Main Sign"
-                            class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
-                    </div>
-                    <div class="absolute top-0 right-0 w-48 h-48">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20162200-9GlKKj2GJUm9PtNuE6H95fEj5v1mvU.png"
-                            alt="Sign Example"
-                            class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
-                    </div>
-                    <div class="absolute bottom-0 left-0 w-48 h-48">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20162200-9GlKKj2GJUm9PtNuE6H95fEj5v1mvU.png"
-                            alt="Sign Example"
-                            class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
+                <div class="relative w-full h-[600px] hero-element">
+                    <!-- Outer container for circle layout -->
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[500px] rounded-full flex justify-center items-center"
+                        style="background: transparent;">
+                        <!-- Inner containers for each image -->
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-72 h-72">
+                            <img src="hero.jpg" alt="Main Sign"
+                                class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
+                        </div>
+                        <div class="absolute right-1/2 w-72 h-72 transform translate-y-1/2">
+                            <!-- Added translate-y-1/4 -->
+                            <img src="vehicle.jpg" alt="Sign Example"
+                                class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
+                        </div>
+                        <div class="absolute  right-0 left-1/2 w-72 h-72 transform translate-y-1/2">
+                            <!-- Added translate-y-1/4 -->
+                            <img src="work2.jpg" alt="Sign Example"
+                                class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Stats Section -->
-            <div class="flex flex-wrap justify-center gap-8 mt-8 mb-16">
-                <div
-                    class="stats-item bg-black/40 backdrop-blur-sm rounded-full p-8 text-center w-[140px] h-[140px] flex flex-col items-center justify-center border border-yellow-500/30 custom-shadow">
-                    <div class="text-yellow-500 font-bold text-3xl counter" data-value="90">0</div>
-                    <div class="text-gray-400 text-sm mt-2">k+ Partners</div>
-                </div>
-                <div
-                    class="stats-item bg-black/40 backdrop-blur-sm rounded-full p-8 text-center w-[140px] h-[140px] flex flex-col items-center justify-center border border-yellow-500/30 custom-shadow">
-                    <div class="text-yellow-500 font-bold text-3xl counter" data-value="40">0</div>
-                    <div class="text-gray-400 text-sm mt-2">k+ Daily Users</div>
-                </div>
-                <div
-                    class="stats-item bg-black/40 backdrop-blur-sm rounded-full p-8 text-center w-[140px] h-[140px] flex flex-col items-center justify-center border border-yellow-500/30 custom-shadow">
-                    <div class="text-yellow-500 font-bold text-3xl counter" data-value="70">0</div>
-                    <div class="text-gray-400 text-sm mt-2">k+ Users</div>
-                </div>
-            </div>
         </div>
     </section>
-
-    <!-- Rest of your sections remain the same -->
 
     <!-- About Section -->
     <section id="about" class="py-24 bg-black/30">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <center>
+                <h3 class="text-xl font-bold text-gold-400 bg-gradient-to-r bg-clip-text text-transparent"
+                    style="background-image: linear-gradient(to right, #ffab03, #ffab03, #ffab03); text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.107);">
+                    About</h3>
+            </center>
+            <br>
             <div
                 class="max-w-4xl mx-auto bg-yellow-500/5 rounded-xl p-8 border border-yellow-500/20 custom-shadow hover-scale">
                 <h2 class="text-3xl font-bold mb-8 text-center">Custom Signs Tailored to Perfection</h2>
@@ -274,6 +361,12 @@
     <!-- Products Section -->
     <section id="products" class="py-24">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <center>
+                <h3 class="text-xl font-bold text-gold-400 bg-gradient-to-r bg-clip-text text-transparent"
+                    style="background-image: linear-gradient(to right, #ffab03, #ffab03, #ffab03); text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.107);">
+                    Products</h3>
+            </center>
+            <br>
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold mb-4">Our Products</h2>
                 <p class="text-gray-300">Discover our range of professional signage solutions</p>
@@ -283,8 +376,7 @@
                 <div
                     class="bg-black/30 rounded-xl overflow-hidden border border-yellow-500/20 custom-shadow hover-scale">
                     <div class="image-hover h-48">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20165240-cSCiWXdja2Pz2zRJEZq4ScGG731nIT.png"
-                            alt="Channel Letters" class="w-full h-full object-cover">
+                        <img src="channel.jpg" alt="Channel Letters" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Channel Letters</h3>
@@ -298,8 +390,7 @@
                 <div
                     class="bg-black/30 rounded-xl overflow-hidden border border-yellow-500/20 custom-shadow hover-scale">
                     <div class="image-hover h-48">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20165240-cSCiWXdja2Pz2zRJEZq4ScGG731nIT.png"
-                            alt="LED Signs" class="w-full h-full object-cover">
+                        <img src="led.png" alt="LED Signs" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">LED Signs</h3>
@@ -313,8 +404,7 @@
                 <div
                     class="bg-black/30 rounded-xl overflow-hidden border border-yellow-500/20 custom-shadow hover-scale">
                     <div class="image-hover h-48">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20165240-cSCiWXdja2Pz2zRJEZq4ScGG731nIT.png"
-                            alt="Custom Banners" class="w-full h-full object-cover">
+                        <img src="custom.png" alt="Custom Banners" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-2">Custom Banners</h3>
@@ -330,132 +420,458 @@
 
     <!-- Gallery Section -->
     <section id="gallery" class="py-24 bg-black/30">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Our Gallery</h2>
-                <p class="text-gray-300">Take a look at our recent projects</p>
+        <div class="container mx-auto px-4">
+            <center>
+                <h3 class="text-xl font-bold text-gold-400 bg-gradient-to-r bg-clip-text text-transparent"
+                    style="background-image: linear-gradient(to right, #ffab03, #ffab03, #ffab03); text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.107);">
+                    Gallery</h3>
+            </center>
+            <br>
+            <h2 class="text-3xl font-bold text-center mb-12">Our Gallery</h2>
+
+            <!-- Gallery Tabs -->
+            <div class="flex justify-center mb-8 space-x-4">
+                <button
+                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors focus:outline-none active:bg-yellow-500/30 active:shadow-inner"
+                    data-filter="all">All</button>
+                <button
+                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors focus:outline-none active:bg-yellow-500/30 active:shadow-inner"
+                    data-filter="box-sign">Box Sign</button>
+                <button
+                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors focus:outline-none active:bg-yellow-500/30 active:shadow-inner"
+                    data-filter="channel-letter">Channel Letter</button>
+                <button
+                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors focus:outline-none active:bg-yellow-500/30 active:shadow-inner"
+                    data-filter="logo-design">Logo Design</button>
+                <button
+                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors focus:outline-none active:bg-yellow-500/30 active:shadow-inner"
+                    data-filter="lettering">Lettering</button>
+                <button
+                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors focus:outline-none active:bg-yellow-500/30 active:shadow-inner"
+                    data-filter="magnets">Magnets</button>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Gallery Items -->
-                <div
-                    class="group relative aspect-square rounded-xl overflow-hidden border-2 border-yellow-500 custom-shadow">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20165240-cSCiWXdja2Pz2zRJEZq4ScGG731nIT.png"
-                        alt="Gallery Image 1"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button
-                            class="bg-yellow-500 text-black px-6 py-2 rounded-md font-medium transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                            View Project
-                        </button>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative" id="gallery-grid">
+                <!-- Gallery Cards -->
+                <div class="gallery-card rounded-lg overflow-hidden p-6" data-category="box-sign">
+                    <img src="product1.png" Box Sign 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Box Sign Example</h3>
+                    <p class="text-gray-300">Modern and effective box sign</p>
+                </div>
+
+                <div class="gallery-card rounded-lg overflow-hidden p-6" data-category="channel-letter">
+                    <img src="product2.png" alt="Channel Letter 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Channel Letter Project</h3>
+                    <p class="text-gray-300">Professional channel lettering solution</p>
+                </div>
+
+                <div class="gallery-card rounded-lg overflow-hidden p-6" data-category="logo-design">
+                    <img src="product3.png" alt="Logo Design 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Creative Logo Design</h3>
+                    <p class="text-gray-300">Eye-catching logo design</p>
+                </div>
+
+                <div class="gallery-card rounded-lg overflow-hidden p-6" data-category="lettering">
+                    <img src="product4.png" alt="Lettering Design 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Custom Lettering Work</h3>
+                    <p class="text-gray-300">Beautiful custom lettering on a glass door</p>
+                </div>
+
+                <div class="gallery-card rounded-lg overflow-hidden p-6" data-category="magnets">
+                    <img src="product5.png" alt="Magnet Design 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Magnet Sign Project</h3>
+                    <p class="text-gray-300">Custom magnets</p>
+                </div>
+
+                <div class="gallery-card rounded-lg overflow-hidden p-6" data-category="magnets">
+                    <img src="product6.png" alt="Magnet Design 2" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <h3 class="text-xl font-bold mb-2">Magnet Example</h3>
+                    <p class="text-gray-300">Quality design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="client-feedback" class="py-16 px-6 relative bg-black text-gray-100 text-left md:text-center">
+        <div class="container mx-auto relative">
+            <h3 class="text-xl font-bold text-gold-400 bg-gradient-to-r bg-clip-text text-transparent"
+                style="background-image: linear-gradient(to right, #ffab03, #ffab03, #ffab03); text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.107);">
+                Testimonials</h3>
+            <br>
+            <h2 class="text-2xl md:text-4xl font-bold mb-2 leading-relaxed animate-fade-in text-white">
+                Crafting Signage Success Stories with <span class="inline">KustomSigns Inc.</span>
+            </h2>
+            <br>
+            <p class="text-lg leading-relaxed text-gray-300">
+                At KustomSigns Inc., our clients' satisfaction is our highest priority. We're proud to deliver signage
+                solutions that exceed expectations, enhance brand visibility, and drive business growth. But don't just
+                take
+                our word for it – hear directly from our valued customers about their experiences partnering with us:
+            </p>
+            <br>
+            <br>
+            <!-- Feedback Grid (Carousel) -->
+            <div class="relative overflow-hidden">
+                <div class="testimonial-carousel flex transition-transform duration-300 ease-in-out"
+                    style="scroll-behavior: smooth;">
+                    <!-- Slide 1 -->
+                    <div class="flex-shrink-0 w-full md:w-1/3 lg:w-1/3 px-4">
+                        <div
+                            class="bg-[#1F1F21] p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-quote-left text-[#c5912c] text-4xl mb-4 block"></i>
+                            <p class="text-white-700 italic mb-4">
+                                "KustomSigns Inc. transformed our storefront with a stunning new LED sign. It's
+                                brighter,
+                                more visible, and has significantly increased foot traffic!"
+                            </p>
+                            <div class="flex items-center space-x-4">
+                                <img src="client1.jpg" alt="Client Photo"
+                                    class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
+                                <div>
+                                    <h4 class="text-lg text-white font-bold">John Doe</h4>
+                                    <div class="text-yellow-400 text-sm">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <p class="text-sm text-white-500">Restaurant Owner, Anytown</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="flex-shrink-0 w-full md:w-1/3 lg:w-1/3 px-4">
+                        <div
+                            class="bg-[#1F1F21] p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-quote-left text-[#c5912c] text-4xl mb-4 block"></i>
+                            <p class="text-white-700 italic mb-4">
+                                "Their team's creativity and expertise were invaluable in designing our custom channel
+                                letters. They truly understood our brand and delivered a sign that reflects our values."
+                            </p>
+                            <div class="flex items-center space-x-4">
+                                <img src="client2.jpg" alt="Client Photo"
+                                    class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
+                                <div>
+                                    <h4 class="text-lg text-white font-bold">Jane Smith</h4>
+                                    <div class="text-yellow-400 text-sm">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-sm text-white-500">Marketing Manager, Local Corp</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="flex-shrink-0 w-full md:w-1/3 lg:w-1/3 px-4">
+                        <div
+                            class="bg-[#1F1F21] p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-quote-left text-[#c5912c] text-4xl mb-4 block"></i>
+                            <p class="text-white-700 italic mb-4">
+                                "From concept to installation, KustomSigns Inc. provided exceptional service and quality
+                                workmanship. Perfect for attracting new
+                                customers."
+                            </p>
+                            <div class="flex items-center space-x-4">
+                                <img src="client3.jpg" alt="Client Photo"
+                                    class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
+                                <div>
+                                    <h4 class="text-lg text-white font-bold">Michael Johnson</h4>
+                                    <div class="text-yellow-400 text-sm">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <p class="text-sm text-white-500">Business Owner, Startup Co.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="flex-shrink-0 w-full md:w-1/3 lg:w-1/3 px-4">
+                        <div
+                            class="bg-[#1F1F21] p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-quote-left text-[#c5912c] text-4xl mb-4 block"></i>
+                            <p class="text-white-700 italic mb-4">
+                                "Their expertise made the entire process stress-free. I highly recommend their services
+                                to
+                                anyone looking for luxury properties."
+                            </p>
+                            <div class="flex items-center space-x-4">
+                                <img src="client4.png" alt="Client Photo"
+                                    class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
+                                <div>
+                                    <h4 class="text-lg text-white font-bold">Jane Smith</h4>
+                                    <div class="text-yellow-400 text-sm">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-sm text-white-500">Los Angeles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Slide 5-->
+                    <div class="flex-shrink-0 w-full md:w-1/3 lg:w-1/3 px-4">
+                        <div
+                            class="bg-[#1F1F21] p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-quote-left text-[#c5912c] text-4xl mb-4 block"></i>
+                            <p class="text-white-700 italic mb-4">
+                                "KustomSigns Inc. helped me every step of the way. Their team was responsive and
+                                professional. Very happy with my new
+                                home!"
+                            </p>
+                            <div class="flex items-center space-x-4">
+                                <img src="client5.png" alt="Client Photo"
+                                    class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
+                                <div>
+                                    <h4 class="text-lg text-white font-bold">Robert Clark</h4>
+                                    <div class="text-yellow-400 text-sm">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <p class="text-sm text-white-500">London</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Slide 6-->
+                    <div class="flex-shrink-0 w-full md:w-1/3 lg:w-1/3 px-4">
+                        <div
+                            class="bg-[#1F1F21] p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">
+                            <i class="fas fa-quote-left text-[#c5912c] text-4xl mb-4 block"></i>
+                            <p class="text-white-700 italic mb-4">
+                                "The service at KustomSigns Inc. is top-notch. They listened to my needs and found the
+                                perfect property. A fantastic
+                                experience!"
+                            </p>
+                            <div class="flex items-center space-x-4">
+                                <img src="client6.png" alt="Client Photo"
+                                    class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
+                                <div>
+                                    <h4 class="text-lg text-white font-bold">Jessica Williams</h4>
+                                    <div class="text-yellow-400 text-sm">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <p class="text-sm text-white-500">Dallas</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- Repeat for other gallery items -->
-                <div
-                    class="group relative aspect-square rounded-xl overflow-hidden border-2 border-yellow-500 custom-shadow">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20165240-cSCiWXdja2Pz2zRJEZq4ScGG731nIT.png"
-                        alt="Gallery Image 2"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button
-                            class="bg-yellow-500 text-black px-6 py-2 rounded-md font-medium transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                            View Project
-                        </button>
-                    </div>
-                </div>
-                <div
-                    class="group relative aspect-square rounded-xl overflow-hidden border-2 border-yellow-500 custom-shadow">
-                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20165240-cSCiWXdja2Pz2zRJEZq4ScGG731nIT.png"
-                        alt="Gallery Image 3"
-                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div
-                        class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button
-                            class="bg-yellow-500 text-black px-6 py-2 rounded-md font-medium transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                            View Project
-                        </button>
-                    </div>
+
+                <!-- Carousel Dots -->
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-gray-500" data-index="0"></button>
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-gray-500" data-index="1"></button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="py-24">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- FAQ Content -->
-                <div class="bg-black/30 rounded-xl p-8 border border-yellow-500/20 custom-shadow">
-                    <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-                    <p class="text-yellow-500 mb-8">Find answers to common questions</p>
-                    <div class="space-y-4" id="faqAccordion">
-                        <!-- FAQ Items -->
-                        <div class="border-b border-yellow-500/20">
-                            <button class="w-full py-4 flex justify-between items-center text-left faq-button">
-                                <span class="text-white hover:text-yellow-500">How much does design cost?</span>
-                                <span class="transform transition-transform duration-300">▼</span>
-                            </button>
-                            <div class="faq-content hidden pb-4">
-                                <p class="text-gray-400">Contact us for a custom quote tailored to your specific needs.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="border-b border-yellow-500/20">
-                            <button class="w-full py-4 flex justify-between items-center text-left faq-button">
-                                <span class="text-white hover:text-yellow-500">Do you fix lights or replace
-                                    lamps?</span>
-                                <span class="transform transition-transform duration-300">▼</span>
-                            </button>
-                            <div class="faq-content hidden pb-4">
-                                <p class="text-gray-400">Yes, we provide comprehensive repair and replacement services.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="border-b border-yellow-500/20">
-                            <button class="w-full py-4 flex justify-between items-center text-left faq-button">
-                                <span class="text-white hover:text-yellow-500">What payment methods do you
-                                    accept?</span>
-                                <span class="transform transition-transform duration-300">▼</span>
-                            </button>
-                            <div class="faq-content hidden pb-4">
-                                <p class="text-gray-400">We accept multiple payment methods including credit cards and
-                                    PayPal.</p>
-                            </div>
-                        </div>
+    <section id="faq" class="py-16 px-6 relative bg-black text-white">
+        <div class="max-w-2xl mx-auto p-6">
+            <h3 class="text-xl font-bold text-gold-400 bg-gradient-to-r bg-clip-text text-transparent"
+                style="background-image: linear-gradient(to right, #ffab03, #ffab03, #ffab03); text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.107);">
+                FAQ</h3>
+            <h1 class="text-3xl font-bold mt-2 text-left">Illuminating Your Signage Queries</h1>
+            <h1 class="text-3xl font-bold mt-1 text-left">Everything You Want to Know About <span
+                    class="text-yellow-500">KustomSigns Inc.</span></h1>
+            <div class="mt-6">
+                <div class="border border-yellow-500 p-4 mb-4">
+                    <div class="flex justify-between items-center cursor-pointer"
+                        onclick="toggleAnswer('answer1', this)">
+                        <h3 class="text-xl font-bold text-left">How much does a custom sign cost?</h3>
+                        <span class="icon text-yellow-500 text-2xl transition-transform duration-300">+</span>
                     </div>
+                    <p id="answer1"
+                        class="answer text-gray-400 text-left overflow-hidden max-h-0 transition-all duration-300">
+                        The cost of a custom sign depends on various factors including size, materials, complexity of
+                        the
+                        design, and installation requirements. Contact us for a personalized quote tailored to your
+                        specific needs.
+                    </p>
                 </div>
-
-                <!-- Contact Form -->
-                <div class="bg-black/30 rounded-xl p-8 border border-yellow-500/20 custom-shadow">
-                    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-                    <p class="text-yellow-500 mb-8">Get in touch with our team</p>
-                    <form id="contactForm" class="space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <input type="text" placeholder="First Name"
-                                class="w-full bg-black/50 border border-yellow-500/20 rounded-md px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 transition-colors"
-                                required>
-                            <input type="text" placeholder="Last Name"
-                                class="w-full bg-black/50 border border-yellow-500/20 rounded-md px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 transition-colors"
-                                required>
-                        </div>
-                        <input type="email" placeholder="Email Address"
-                            class="w-full bg-black/50 border border-yellow-500/20 rounded-md px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 transition-colors"
-                            required>
-                        <textarea placeholder="Your Message" rows="4"
-                            class="w-full bg-black/50 border border-yellow-500/20 rounded-md px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 transition-colors"
-                            required></textarea>
-                        <button type="submit"
-                            class="w-full bg-yellow-500 text-black py-3 rounded-md font-medium hover:bg-yellow-400 transition-colors">
-                            Send Message
-                        </button>
-                    </form>
+                <div class="border border-yellow-500 p-4 mb-4">
+                    <div class="flex justify-between items-center cursor-pointer"
+                        onclick="toggleAnswer('answer2', this)">
+                        <h3 class="text-xl font-bold text-left">What types of signs do you offer?</h3>
+                        <span class="icon text-yellow-500 text-2xl transition-transform duration-300">+</span>
+                    </div>
+                    <p id="answer2"
+                        class="answer text-gray-400 text-left overflow-hidden max-h-0 transition-all duration-300">
+                        We offer a wide range of sign options including channel letters, LED signs, illuminated signs,
+                        banners, vehicle wraps, window graphics, and custom signage solutions for businesses of all
+                        sizes.
+                    </p>
+                </div>
+                <!-- FAQ Item -->
+                <div class="border border-yellow-500 p-4 mb-4">
+                    <div class="flex justify-between items-center cursor-pointer"
+                        onclick="toggleAnswer('answer3', this)">
+                        <h3 class="text-xl font-bold text-left">What is the typical turnaround time for a sign project?
+                        </h3>
+                        <span class="icon text-yellow-500 text-2xl transition-transform duration-300">+</span>
+                    </div>
+                    <p id="answer3"
+                        class="answer text-gray-400 text-left overflow-hidden max-h-0 transition-all duration-300">
+                        The turnaround time for a sign project varies depending on the complexity and scope of the work.
+                        We
+                        strive to complete projects efficiently while maintaining the highest quality standards. We will
+                        provide you with an estimated timeline during the consultation process.
+                    </p>
+                </div>
+                <div class="border border-yellow-500 p-4 mb-4">
+                    <div class="flex justify-between items-center cursor-pointer"
+                        onclick="toggleAnswer('answer4', this)">
+                        <h3 class="text-xl font-bold text-left">Do you offer installation services?</h3>
+                        <span class="icon text-yellow-500 text-2xl transition-transform duration-300">+</span>
+                    </div>
+                    <p id="answer4"
+                        class="answer text-gray-400 text-left overflow-hidden max-h-0 transition-all duration-300">
+                        Yes, we provide professional installation services for all types of signs. Our experienced
+                        installation team ensures that your sign is installed safely and correctly, adhering to all
+                        local
+                        codes and regulations.
+                    </p>
+                </div>
+                <div class="border border-yellow-500 p-4 mb-4">
+                    <div class="flex justify-between items-center cursor-pointer"
+                        onclick="toggleAnswer('answer5', this)">
+                        <h3 class="text-xl font-bold text-left">What is the warranty on your signs?</h3>
+                        <span class="icon text-yellow-500 text-2xl transition-transform duration-300">+</span>
+                    </div>
+                    <p id="answer5"
+                        class="answer text-gray-400 text-left overflow-hidden max-h-0 transition-all duration-300">
+                        We stand behind the quality of our signs and offer a warranty against manufacturing defects. The
+                        specific terms of the warranty may vary depending on the type of sign and materials used. Ask
+                        your
+                        representative for more details!
+                    </p>
+                </div>
+                <div class="border border-yellow-500 p-4 mb-4">
+                    <div class="flex justify-between items-center cursor-pointer"
+                        onclick="toggleAnswer('answer6', this)">
+                        <h3 class="text-xl font-bold text-left">Can you help with the design of my sign?</h3>
+                        <span class="icon text-yellow-500 text-2xl transition-transform duration-300">+</span>
+                    </div>
+                    <p id="answer6"
+                        class="answer text-gray-400 text-left overflow-hidden max-h-0 transition-all duration-300">
+                        Absolutely! Our experienced design team can work with you to create a custom sign that
+                        effectively
+                        communicates your brand message and meets your specific needs. We can create from simple banner
+                        - coming soon to a great channel letter sign, any size any color and design.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 relative overflow-hidden">
+        <div class="container mx-auto px-8">
+            <div class="bg-white rounded-3xl shadow-xl p-12 relative overflow-hidden"
+                style="background-image: url(contact.jpg); background-repeat: no-repeat;background-size: cover;background-position: 20% 20%;">
+                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+                <div class="relative z-10">
+                    <div class="text-center mb-12">
+                        <span class="text-yellow-400 uppercase tracking-wider font-medium">Get In Touch</span>
+                        <h2 class="text-4xl font-bold mt-4 text-white">Start Your Project</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <form id="contact1" class="space-y-6">
+                            <div>
+                                <label class="block text-yellow-400 text-sm font-bold mb-2" for="name">
+                                    Name *
+                                </label>
+                                <input type="text" id="name" placeholder="Your Name"
+                                    class="w-full px-6 py-4 rounded-xl border border-gray-200 focus:border-gold outline-none transition-all text-black">
+
+                            </div>
+                            <div>
+                                <label class="block text-yellow-400 text-sm font-bold mb-2" for="email">
+                                    Email *
+                                </label>
+                                <input type="email" id="email" placeholder="Email Address"
+                                    class="w-full px-6 py-4 rounded-xl border border-gray-200 focus:border-gold outline-none transition-all text-black">
+
+                            </div>
+                            <div>
+                                <label class="block text-yellow-400 text-sm font-bold mb-2" for="comment">
+                                    Comment *
+                                </label>
+                                <textarea rows="4" id="comment" placeholder="Your Message"
+                                    class="w-full px-6 py-4 rounded-xl border border-gray-200 focus:border-gold outline-none transition-all text-black"></textarea>
+
+                            </div>
+                            <button type="button" onclick="composeEmail()"
+                                class="gradient-button w-full py-4 rounded-xl text-white font-medium">
+                                Submit Now
+                            </button>
+                        </form>
+                        <div class="space-y-8">
+                            <div class="flex items-start space-x-4">
+                                <div class="p-4 bg-gold/10 rounded-xl">
+                                    <i class="fas fa-map-marker-alt text-yellow-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-2 text-yellow-400">Location</h4>
+                                    <p class="text-white">Oklahoma City, OK</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="p-4 bg-gold/10 rounded-xl">
+                                    <i class="fas fa-phone-alt text-yellow-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-2 text-yellow-400">Call</h4>
+                                    <p class="text-white" data-tooltip="Call us now!"><a
+                                            href="tel:+15551234567">405-635-8009</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="p-4 bg-gold/10 rounded-xl">
+                                    <i class="fas fa-envelope text-yellow-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-2 text-yellow-400">Email</h4>
+                                    <p class="text-white" data-tooltip="Send an email to the team!"><a
+                                            href="mailto:KustomSignsOK@Gmail.com">KustomSignsOK@Gmail.com</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="p-4 bg-gold/10 rounded-xl">
+                                    <i class="fas fa-clock text-yellow-400 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-2 text-yellow-400">10am - 5pm</h4>
+                                    <p class="text-white" data-tooltip="Open Hours">Opening Hours</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
 
     <!-- Footer -->
     <footer class="bg-black/50 border-t border-yellow-500/20 py-16">
@@ -464,8 +880,7 @@
                 <!-- Company Info -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-23%20162200-9GlKKj2GJUm9PtNuE6H95fEj5v1mvU.png"
-                            alt="Kustom Signs" class="w-12 h-12">
+                        <img src="logo.png" alt="Kustom Signs" class="w-12 h-12">
                         <span class="font-bold text-lg">KustomSigns</span>
                     </div>
                     <p class="text-gray-400">Creating impactful signage solutions since 2001</p>
@@ -518,7 +933,7 @@
 
             <!-- Copyright -->
             <div class="mt-12 pt-8 border-t border-yellow-500/20 text-center text-gray-400">
-                <p>&copy; 2024 KustomSigns. All rights reserved.</p>
+                <p>© 2024 KustomSigns. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -544,7 +959,6 @@
             opacity: 0,
             y: 30,
             duration: 0.8,
-            stagger: 0.2,
             scrollTrigger: {
                 trigger: '.stats-item',
                 start: "top 80%",
@@ -627,8 +1041,8 @@
         });
     </script>
     <script>
-        // Animate sections on scroll
-        document.querySelectorAll('section').forEach((section, index) => {
+        // Animate sections on scroll, excluding the hero section
+        document.querySelectorAll('section:not(#home)').forEach((section, index) => {
             gsap.from(section, {
                 opacity: 0,
                 y: 50,
@@ -660,11 +1074,14 @@
             counters.forEach(counter => {
                 const target = parseInt(counter.getAttribute('data-value'));
                 gsap.to(counter, {
-                    textContent: target,
+                    textContent: target + '+', // Append the "+" sign
                     duration: 2,
                     delay: 1.5, // Start after stats appear
                     snap: { textContent: 1 },
-                    ease: "power1.inOut"
+                    ease: "power1.inOut",
+                    onUpdate: function () { // Custom onUpdate to ensure "+" is always present
+                        counter.textContent = this.targets()[0].textContent + '+';
+                    }
                 });
             });
         });
@@ -750,6 +1167,214 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        // Gallery Tab Functionality
+        const galleryTabs = document.querySelectorAll('.gallery-tab');
+        const galleryCards = document.querySelectorAll('.gallery-card');
+        const galleryGrid = document.getElementById('gallery-grid');
+
+        galleryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                galleryTabs.forEach(t => t.classList.remove('active'));
+
+                // Add active class to the clicked tab
+                tab.classList.add('active');
+
+                // Get the filter attribute value
+                const filter = tab.dataset.filter;
+
+                // Animate Out
+                gsap.to(galleryCards, {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.3,
+                    stagger: 0.05,
+                    onComplete: () => {
+                        // Hide all cards
+                        galleryCards.forEach(card => {
+                            card.style.display = 'none';
+                        });
+
+                        // Show filtered cards
+                        const filteredCards = filter === 'all' ? galleryCards : document.querySelectorAll(`.gallery-card[data-category="${filter}"]`);
+                        filteredCards.forEach(card => {
+                            card.style.display = 'block';
+                        });
+
+                        // Animate In
+                        gsap.fromTo(filteredCards, {
+                            opacity: 0,
+                            y: -20
+                        }, {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.3,
+                            stagger: 0.05,
+                            clearProps: "all"  // Important to clear initial settings
+                        });
+                    }
+                });
+            });
+        });
+
+        // Initialize
+        galleryTabs[0].click();
+    </script>
+
+    <script>
+        // Contact section header animations
+        ScrollTrigger.batch("#contact .text-gold, #contact .text-4xl", {
+            onEnter: (elements) => {
+                gsap.from(elements, {
+                    opacity: 0,
+                    y: 60,
+                    stagger: 0.2,
+                    duration: 1,
+                    ease: "power3.out"
+                });
+            },
+            start: "top 80%",
+        });
+
+        // Contact form animation
+        gsap.from("#contact form > div", {
+            opacity: 0,
+            x: -50,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: "#contact form",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+
+        // Contact info items animation (Location, Call, Email, Hours)
+        gsap.from("#contact .space-y-8 > div", {
+            opacity: 0,
+            x: 50,
+            duration: 0.8,
+            stagger: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: "#contact .space-y-8",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+
+        // Submit button animation
+        gsap.from("#contact form button", {
+            opacity: 1,
+            y: -5,
+            duration: 0.8,
+            delay: 0.6,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: "#contact form",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
+    </script>
+    <script>
+        function toggleAnswer(id, element) {
+            const answer = document.getElementById(id);
+            const icon = element.querySelector('.icon');
+
+            if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+                answer.style.maxHeight = '0px';
+                icon.innerHTML = '&#43;';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.innerHTML = '&#43;';
+                icon.style.transform = 'rotate(45deg)';
+            }
+        }
+
+
+    </script>
+
+    <script>
+        const carousel = document.querySelector('.testimonial-carousel');
+        const dots = document.querySelectorAll('.carousel-dot');
+        let itemsPerSlide = 3;
+        let currentIndex = 0;
+
+        function updateItemsPerSlide() {
+            // Adjust items per slide based on screen width
+            if (window.innerWidth <= 768) { // For mobile
+                itemsPerSlide = 1;
+            } else if (window.innerWidth <= 1024) { // For tablets
+                itemsPerSlide = 2;
+            } else { // For desktop
+                itemsPerSlide = 3;
+            }
+        }
+
+        function showSlide(idx) {
+            const totalSlides = Math.ceil(carousel.children.length / itemsPerSlide);
+            currentIndex = (idx + totalSlides) % totalSlides;
+            const offset = -currentIndex * (100 / itemsPerSlide) * itemsPerSlide;
+            carousel.style.transform = `translateX(${offset}%)`;
+
+            dots.forEach((dot, dotIdx) => {
+                dot.classList.toggle('bg-[#c5912c]', dotIdx === currentIndex);
+                dot.classList.toggle('bg-gray-500', dotIdx !== currentIndex);
+            });
+        }
+
+        // Update items per slide on load and resize
+        window.addEventListener('resize', updateItemsPerSlide);
+        updateItemsPerSlide();
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+            });
+        });
+
+        showSlide(currentIndex);
+        setInterval(() => {
+            showSlide((currentIndex + 1) % (carousel.children.length / itemsPerSlide));
+        }, 5000);
+
+    </script>
+
+    <script>
+        function composeEmail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const comment = document.getElementById('comment').value;
+
+            if (!isValidEmail(email)) {
+                alert('Please enter a valid email address.');
+                return; // Prevent opening Gmail
+            }
+
+            const subject = "New Inquiry from Website";
+
+            // Use <br> tags for line breaks in the body
+            const body = `Name: ${name}<br>Email: ${email}<br>Message:<br>${comment}`;
+
+            // Encode the subject and body, replace newlines with <br>, then replace the encoded <br> with the proper HTML entities
+            const encodedSubject = encodeURIComponent(subject);
+            const encodedBody = encodeURIComponent(body).replace(/%3Cbr%3E/g, '%0D%0A');
+
+            // Open Gmail in a new tab/window
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=KustomSignsOK@Gmail.com&su=${encodedSubject}&body=${encodedBody}`;
+            window.open(gmailUrl, '_blank');
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
     </script>
 </body>
 
