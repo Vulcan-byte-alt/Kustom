@@ -208,6 +208,19 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
         }
+
+        @keyframes slideFromLeft {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideFromRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0.5; }
+        }
     </style>
 </head>
 
@@ -250,17 +263,22 @@
             <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
                 <!-- Hero Content -->
                 <div class="space-y-8">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight hero-element">
-                        ALL ABOUT CUSTOM SIGNS - IT'S ALL HERE
+
+                    <style>
+                        .my-heading {
+                            line-height: 1.2;
+                            /* Or whatever value you prefer */
+                        }
+                    </style>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-5xl font-bold leading-tight hero-element my-heading">
+                        Crafting Signs That Speak Clearly Fast, Easy and Simple
                     </h1>
                     <p class="text-yellow-500 text-xl sm:text-2xl font-medium hero-element">
-                        A business without a sign is a sign of no business
+                        Your business deserves a sign that grabs attention effortlessly. Our custom signs are designed
+                        for maximum impact, ensuring clarity and readability at a glance.
                     </p>
                     <div class="space-y-6">
-                        <p class="text-gray-300 text-lg hero-element">
-                            The Best Sign for your shop is a SIGN that is:<br>
-                            Fast, Easy and Simple
-                        </p>
                         <div class="flex flex-col sm:flex-row gap-4 hero-element">
                             <button
                                 class="bg-yellow-500 text-black px-8 py-3 rounded-md font-medium hover:bg-yellow-400 transition-all duration-300 hover:shadow-lg">
@@ -295,16 +313,16 @@
                     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[500px] rounded-full flex justify-center items-center"
                         style="background: transparent;">
                         <!-- Inner containers for each image -->
-                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-72 h-72">
+                        <div class="absolute top-[-40px] left-[190px] transform -translate-x-1/2 w-72 h-72" style="margin-left: 130px;margin-bottom: 90px;">
                             <img src="hero.jpg" alt="Main Sign"
                                 class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
                         </div>
-                        <div class="absolute right-1/2 w-72 h-72 transform translate-y-1/2">
+                        <div class="absolute right-[180px] top-[-20px] w-72 h-72 transform translate-y-1/2" style="margin-bottom: 220px;margin-left: 180px;">
                             <!-- Added translate-y-1/4 -->
-                            <img src="vehicle.jpg" alt="Sign Example"
+                            <img src="favicon.png" alt="Sign Example"
                                 class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
                         </div>
-                        <div class="absolute  right-0 left-1/2 w-72 h-72 transform translate-y-1/2">
+                        <div class="absolute right-0 left-1/2 w-72 h-72 transform translate-y-1/2">
                             <!-- Added translate-y-1/4 -->
                             <img src="work2.jpg" alt="Sign Example"
                                 class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
@@ -358,140 +376,288 @@
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="py-24">
+    <section class="py-24 bg-black">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <center>
-                <h3 class="text-xl font-bold text-gold-400 bg-gradient-to-r bg-clip-text text-transparent"
+                <h3 class="text-xl mb-4 font-bold text-gold-400 bg-gradient-to-r bg-clip-text text-transparent"
                     style="background-image: linear-gradient(to right, #ffab03, #ffab03, #ffab03); text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.107);">
-                    Products</h3>
+                    Features</h3>
             </center>
-            <br>
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Our Products</h2>
-                <p class="text-gray-300">Discover our range of professional signage solutions</p>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Why Us?</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Wonder what sets us apart from others , well here is your answer
+                </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product Cards -->
-                <div
-                    class="bg-black/30 rounded-xl overflow-hidden border border-yellow-500/20 custom-shadow hover-scale">
-                    <div class="image-hover h-48">
-                        <img src="channel.jpg" alt="Channel Letters" class="w-full h-full object-cover">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+    
+    
+                <!-- Feature 1: Comprehensive Sign Solutions -->
+                <div class="p-6 rounded-lg space-y-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                        </svg>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Channel Letters</h3>
-                        <p class="text-gray-300 mb-4">Custom-made dimensional letters for maximum visibility</p>
-                        <button class="text-yellow-500 hover:text-yellow-400 transition-colors">
-                            Learn More →
-                        </button>
-                    </div>
+                    <h3 class="text-xl font-bold text-white">Comprehensive Sign Solutions</h3>
+                    <p class="text-gray-300">
+                        From simple banners like 'Coming Soon' to large channel letter signs, we offer signs in
+                        any size, color, and dimension, tailored to your needs.
+                    </p>
                 </div>
-
-                <div
-                    class="bg-black/30 rounded-xl overflow-hidden border border-yellow-500/20 custom-shadow hover-scale">
-                    <div class="image-hover h-48">
-                        <img src="led.png" alt="LED Signs" class="w-full h-full object-cover">
+    
+                <!-- Feature 2: Quality Materials & Professional Service -->
+                <div class="p-6 rounded-lg space-y-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-red-700 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">LED Signs</h3>
-                        <p class="text-gray-300 mb-4">Energy-efficient illuminated displays</p>
-                        <button class="text-yellow-500 hover:text-yellow-400 transition-colors">
-                            Learn More →
-                        </button>
-                    </div>
+                    <h3 class="text-xl font-bold text-white">Quality Materials & Professional Service</h3>
+                    <p class="text-gray-300">
+                        We use only the best materials, including ballast, transformers, and LEDs, to ensure
+                        high-quality, durable signs and lighting solutions.
+                    </p>
                 </div>
-
-                <div
-                    class="bg-black/30 rounded-xl overflow-hidden border border-yellow-500/20 custom-shadow hover-scale">
-                    <div class="image-hover h-48">
-                        <img src="custom.png" alt="Custom Banners" class="w-full h-full object-cover">
+    
+                <!-- Feature 3: Bonded & Insured -->
+                <div class="p-6 rounded-lg space-y-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-green-700 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+    
+    
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Custom Banners</h3>
-                        <p class="text-gray-300 mb-4">High-quality printed banners for any occasion</p>
-                        <button class="text-yellow-500 hover:text-yellow-400 transition-colors">
-                            Learn More →
-                        </button>
+                    <h3 class="text-xl font-bold text-white">Bonded & Insured</h3>
+                    <p class="text-gray-300">
+                        Kustom Signs LLC is fully bonded and insured, providing peace of mind with professional
+                        tech support for sign installation, repair, and maintenance.
+                    </p>
+                </div>
+    
+                <!-- Feature 4: Tailored Solutions for Your Budget -->
+                <div class="p-6 rounded-lg space-y-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-700 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+    
                     </div>
+                    <h3 class="text-xl font-bold text-white">Tailored Solutions for Your Budget</h3>
+                    <p class="text-gray-300">
+                        We work closely with our clients to provide solutions that fit their needs and budget,
+                        focusing on getting the best value rather than the most expensive option.
+                    </p>
+                </div>
+    
+                <!-- Feature 5: Expert Sign Installation & Support -->
+                <div class="p-6 rounded-lg space-y-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-r from-yellow-500 to-yellow-700 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Expert Sign Installation & Support</h3>
+                    <p class="text-gray-300">
+                        Our team offers expert installation, along with support to fix, replace, and maintain signs
+                        and lighting, ensuring your signage works efficiently for years.
+                    </p>
+                </div>
+    
+                <!-- Feature 6: Custom Sign Design -->
+                <div class="p-6 rounded-lg space-y-4">
+                    <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-purple-700 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-white">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Custom Sign Design</h3>
+                    <p class="text-gray-300">
+                        Whether you need a simple banner or a custom-built sign, we offer personalized
+                        designs to suit your business, brand, and location.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
+    
+    <script>
+        // GSAP Animations for Features Section
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from('.p-6.rounded-lg', {
+            scrollTrigger: {
+                trigger: '.p-6.rounded-lg',
+                start: 'top 80%', // Start the animation when the top of the trigger hits 80% of the viewport
+                toggleActions: 'play none none reverse'
+            },
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            stagger: 0.2, // Stagger the animation of each feature
+            ease: "power2.out"
+        });
+
+    </script>
 
     <!-- Gallery Section -->
     <section id="gallery" class="py-24">
         <div class="container mx-auto px-4">
             <center>
-                <h3 class="text-xl font-bold text-gold-400 bg-gradient-to-r bg-clip-text text-transparent"
+                <h3 class="text-xl mb-4 font-bold text-gold-400 bg-gradient-to-r bg-clip-text text-transparent"
                     style="background-image: linear-gradient(to right, #ffab03, #ffab03, #ffab03); text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.107);">
                     Gallery</h3>
             </center>
-            <br>
             <h2 class="text-3xl font-bold text-center mb-12">Our Gallery</h2>
-
+    
             <!-- Gallery Tabs -->
             <div class="flex justify-center mb-8 space-x-4">
                 <button
-                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors focus:outline-none active:bg-yellow-500/30 active:shadow-inner"
+                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
                     data-filter="all">All</button>
                 <button
-                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors focus:outline-none active:bg-yellow-500/30 active:shadow-inner"
+                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
                     data-filter="box-sign">Box Sign</button>
                 <button
-                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors focus:outline-none active:bg-yellow-500/30 active:shadow-inner"
+                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
                     data-filter="channel-letter">Channel Letter</button>
                 <button
-                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors focus:outline-none active:bg-yellow-500/30 active:shadow-inner"
+                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
                     data-filter="logo-design">Logo Design</button>
                 <button
-                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors focus:outline-none active:bg-yellow-500/30 active:shadow-inner"
+                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
                     data-filter="lettering">Lettering</button>
                 <button
-                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500/10 hover:bg-yellow-500/20 transition-colors focus:outline-none active:bg-yellow-500/30 active:shadow-inner"
+                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
                     data-filter="magnets">Magnets</button>
+                <button class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
+                    data-filter="led">LED Digital Signs</button>
             </div>
-
+    
             <!-- Gallery Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative" id="gallery-grid">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="gallery-grid">
                 <!-- Gallery Cards -->
-                <div class="gallery-card rounded-lg overflow-hidden p-6" data-category="box-sign">
-                    <img src="product1.png" Box Sign 1" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-bold mb-2">Box Sign Example</h3>
-                    <p class="text-gray-300">Modern and effective box sign</p>
+                <div class="gallery-card relative rounded-lg overflow-hidden" data-category="box-sign">
+                    <img src="product1.png" alt="Box Sign 1" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 w-full bg-black/70 p-4 text-white text-center">
+                        <h3 class="text-lg font-bold">Box Sign Example</h3>
+                        <p>Modern and effective box sign</p>
+                    </div>
                 </div>
-
-                <div class="gallery-card rounded-lg overflow-hidden p-6" data-category="channel-letter">
-                    <img src="product2.png" alt="Channel Letter 1" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-bold mb-2">Channel Letter Project</h3>
-                    <p class="text-gray-300">Professional channel lettering solution</p>
+    
+                <div class="gallery-card relative rounded-lg overflow-hidden" data-category="channel-letter">
+                    <img src="product2.png" alt="Channel Letter 1" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 w-full bg-black/70 p-4 text-white text-center">
+                        <h3 class="text-lg font-bold">Channel Letter Project</h3>
+                        <p>Professional channel lettering solution</p>
+                    </div>
                 </div>
-
-                <div class="gallery-card rounded-lg overflow-hidden p-6" data-category="logo-design">
-                    <img src="product3.png" alt="Logo Design 1" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-bold mb-2">Creative Logo Design</h3>
-                    <p class="text-gray-300">Eye-catching logo design</p>
+    
+                <div class="gallery-card relative rounded-lg overflow-hidden" data-category="logo-design">
+                    <img src="product3.png" alt="Logo Design 1" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 w-full bg-black/70 p-4 text-white text-center">
+                        <h3 class="text-lg font-bold">Creative Logo Design</h3>
+                        <p>Eye-catching logo design</p>
+                    </div>
                 </div>
-
-                <div class="gallery-card rounded-lg overflow-hidden p-6" data-category="lettering">
-                    <img src="product4.png" alt="Lettering Design 1" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-bold mb-2">Custom Lettering Work</h3>
-                    <p class="text-gray-300">Beautiful custom lettering on a glass door</p>
+    
+                <div class="gallery-card relative rounded-lg overflow-hidden" data-category="lettering">
+                    <img src="product4.png" alt="Lettering Design 1" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 w-full bg-black/70 p-4 text-white text-center">
+                        <h3 class="text-lg font-bold">Custom Lettering Work</h3>
+                        <p>Beautiful custom lettering on a glass door</p>
+                    </div>
                 </div>
-
-                <div class="gallery-card rounded-lg overflow-hidden p-6" data-category="magnets">
-                    <img src="product5.png" alt="Magnet Design 1" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-bold mb-2">Magnet Sign Project</h3>
-                    <p class="text-gray-300">Custom magnets</p>
+    
+                <div class="gallery-card relative rounded-lg overflow-hidden" data-category="magnets">
+                    <img src="product5.png" alt="Magnet Design 1" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 w-full bg-black/70 p-4 text-white text-center">
+                        <h3 class="text-lg font-bold">Magnet Sign Project</h3>
+                        <p>Custom magnets</p>
+                    </div>
                 </div>
-
-                <div class="gallery-card rounded-lg overflow-hidden p-6" data-category="magnets">
-                    <img src="product6.png" alt="Magnet Design 2" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-bold mb-2">Magnet Example</h3>
-                    <p class="text-gray-300">Quality design</p>
+    
+                <div class="gallery-card relative rounded-lg overflow-hidden" data-category="led">
+                    <img src="product6.png" alt="Magnet Design 2" class="w-full h-64 object-cover">
+                    <div class="absolute bottom-0 w-full bg-black/70 p-4 text-white text-center">
+                        <h3 class="text-lg font-bold">LED Sign</h3>
+                        <p>Quality design</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    <section class="relative w-full py-16 bg-black">
+        <div class="container mx-auto px-4 relative">
+            <center><h3 class="text-xl mb-4 font-bold text-gold-400 bg-gradient-to-r bg-clip-text text-transparent"
+                style="background-image: linear-gradient(to right, #ffab03, #ffab03, #ffab03); text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.107);">
+                Products</h3></center>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">Our Products</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Innovative signage solutions that transform your brand's visual
+                    identity</p>
+            </div>
+    
+            <div id="carouselContainer" class="flex items-center justify-center space-x-4 relative overflow-hidden">
+                <!-- Left Product -->
+                <div id="leftProduct"
+                    class="w-[20%] opacity-50 transform -translate-x-12 transition-all duration-300 relative">
+                    <img src="led.png" alt="LED Signs" class="w-full rounded-lg shadow-lg" />
+                    <div class="absolute bottom-4 left-4 right-4 bg-black/60 rounded-lg p-3 text-white text-center">
+                        <h3 class="font-bold text-sm mb-1">LED Signs</h3>
+                        <p class="text-xs opacity-80">Energy-efficient displays</p>
+                    </div>
+                </div>
+    
+                <!-- Central Product -->
+                <div id="centerProduct" class="w-[40%] z-20 relative transform transition-all duration-300">
+                    <img src="channel.jpg" alt="Channel Letters" class="w-full rounded-2xl shadow-2xl" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-2xl"></div>
+                    <div class="absolute bottom-8 left-8 right-8 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Channel Letters</h3>
+                        <p class="text-sm mb-4">Custom-made dimensional letters designed to maximize brand visibility and
+                            create striking visual impact.</p>
+                        <a href="#"
+                            class="inline-block bg-yellow-500 text-black px-4 py-2 rounded-lg text-sm hover:bg-yellow-400 transition-colors">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Right Product -->
+                <div id="rightProduct"
+                    class="w-[20%] opacity-50 transform translate-x-12 transition-all duration-300 relative">
+                    <img src="custom.png" alt="Custom Banners" class="w-full rounded-lg shadow-lg" />
+                    <div class="absolute bottom-4 left-4 right-4 bg-black/60 rounded-lg p-3 text-white text-center">
+                        <h3 class="font-bold text-sm mb-1">Custom Banners</h3>
+                        <p class="text-xs opacity-80">High-quality printed displays</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
 
     <section id="client-feedback" class="py-16 px-6 relative  text-gray-100 text-left md:text-center">
         <div class="container mx-auto relative">
@@ -785,101 +951,195 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-32 relative overflow-hidden">
-        <div class="container mx-auto px-8">
-            <div class=" rounded-3xl shadow-xl p-12 relative overflow-hidden"
-                style="background-image: url(contact.jpg); background-repeat: no-repeat;background-size: cover;background-position: 20% 20%;">
-                <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-                <div class="relative z-10">
-                    <div class="text-center mb-12">
-                        <span class="text-yellow-400 uppercase tracking-wider font-medium">Get In Touch</span>
-                        <h2 class="text-4xl font-bold mt-4 text-white">Start Your Project</h2>
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="contact-container grid md:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-xl">
+                <!-- Left Side: Contact Image -->
+                <div class="relative contact-image">
+                    <img src="Anhk_SunDesert.jpg" alt="Contact Us" class="w-full h-full object-cover absolute inset-0">
+                    <div class="relative z-10 h-full flex items-center justify-center"
+                        style="background: rgba(180, 136, 1, 0.3);"></div>
+                </div>
+    
+                <!-- Right Side: Contact Form -->
+                <div class="bg-[#b48801] p-8 relative contact-form">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-white form-title">Contact Us</h2>
                     </div>
-                    <div class="grid md:grid-cols-2 gap-12">
-                        <form id="contact1" class="space-y-6">
-                            <div>
-                                <label class="block text-yellow-400 text-sm font-bold mb-2" for="name">
-                                    Name *
-                                </label>
-                                <input type="text" id="name" placeholder="Your Name"
-                                    class="w-full px-6 py-4 rounded-xl border border-gray-200 focus:border-gold outline-none transition-all text-white"
-                                    style="background-color: rgba(0,0,0,0.7)">
-
-                            </div>
-                            <div>
-                                <label class="block text-yellow-400 text-sm font-bold mb-2" for="email">
-                                    Email *
-                                </label>
-                                <input type="email" id="email" placeholder="Email Address"
-                                    class="w-full px-6 py-4 rounded-xl border border-gray-200 focus:border-gold outline-none transition-all text-white"
-                                    style="background-color: rgba(0,0,0,0.7)">
-
-                            </div>
-                            <div>
-                                <label class="block text-yellow-400 text-sm font-bold mb-2" for="comment">
-                                    Comment *
-                                </label>
-                                <textarea rows="4" id="comment" placeholder="Your Message"
-                                    class="w-full px-6 py-4 rounded-xl border border-gray-200 focus:border-gold outline-none transition-all text-white"
-                                    style="background-color: rgba(0,0,0,0.7)"></textarea>
-
-                            </div>
-                            <button type="button" onclick="composeEmail()"
-                                class="gradient-button w-full py-4 rounded-xl text-white font-medium">
-                                Submit Now
-                            </button>
-                        </form>
-                        <div class="space-y-8">
-                            <div class="flex items-start space-x-4">
-                                <div class="p-4 bg-gold/10 rounded-xl">
-                                    <i class="fas fa-map-marker-alt text-yellow-400 text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-2 text-yellow-400">Location</h4>
-                                    <p class="text-white">Oklahoma City, OK</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <div class="p-4 bg-gold/10 rounded-xl">
-                                    <i class="fas fa-phone-alt text-yellow-400 text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-2 text-yellow-400">Call</h4>
-                                    <p class="text-white" data-tooltip="Call us now!"><a
-                                            href="tel:+15551234567">405-635-8009</a></p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <div class="p-4 bg-gold/10 rounded-xl">
-                                    <i class="fas fa-envelope text-yellow-400 text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-2 text-yellow-400">Email</h4>
-                                    <p class="text-white" data-tooltip="Send an email to the team!"><a
-                                            href="mailto:KustomSignsOK@Gmail.com">KustomSignsOK@Gmail.com</a></p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <div class="p-4 bg-gold/10 rounded-xl">
-                                    <i class="fas fa-clock text-yellow-400 text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold mb-2 text-yellow-400">10am - 5pm</h4>
-                                    <p class="text-white" data-tooltip="Open Hours">Opening Hours</p>
-                                </div>
-                            </div>
+    
+                    <form id="contact-form" class="space-y-4">
+                        <div class="form-input">
+                            <label for="name" class="block text-sm font-medium text-white mb-2">Your Name</label>
+                            <input type="text" id="name" name="name"
+                                class="w-full px-4 py-2 rounded-xl border border-white/30 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:border-white input-field"
+                                placeholder="Enter your name" required>
                         </div>
-                    </div>
+    
+                        <div class="form-input">
+                            <label for="email" class="block text-sm font-medium text-white mb-2">Your Email</label>
+                            <input type="email" id="email" name="email"
+                                class="w-full px-4 py-2 rounded-xl border border-white/30 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:border-white input-field"
+                                placeholder="Enter your email" required>
+                        </div>
+    
+                        <div class="form-input">
+                            <label for="message" class="block text-sm font-medium text-white mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="4"
+                                class="w-full px-4 py-2 rounded-xl border border-white/30 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:border-white input-field"
+                                placeholder="Enter your message" required></textarea>
+                        </div>
+    
+                        <div class="form-submit">
+                            <button type="submit"
+                                class="w-full bg-white text-[#b48801] py-2 rounded-xl hover:bg-white/90 transition duration-300 font-bold submit-button">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
+        </div>
     </section>
+    
+    <style>
+        /* Additional animations */
+        .input-field:focus {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+    
+        .submit-button:hover {
+            animation: pulse 1s infinite;
+        }
+    
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+    
+            50% {
+                transform: scale(1.05);
+            }
+    
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+    
+    <script>
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animate form elements on scroll
+        gsap.from('.contact-container', {
+            scrollTrigger: {
+                trigger: '.contact-container',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            },
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            ease: 'power3.out'
+        });
+
+        // Stagger animation for form inputs
+        gsap.from('.form-input', {
+            scrollTrigger: {
+                trigger: '.contact-form',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            },
+            opacity: 0,
+            x: -50,
+            stagger: 0.2,
+            duration: 0.8,
+            ease: 'power2.out'
+        });
+
+        // Animate title
+        gsap.from('.form-title', {
+            scrollTrigger: {
+                trigger: '.contact-form',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            },
+            opacity: 0,
+            scale: 0.5,
+            duration: 1,
+            ease: 'elastic.out(1, 0.3)'
+        });
+
+        // Submit button animation
+        const submitButton = document.querySelector('.submit-button');
+        submitButton.addEventListener('mouseenter', () => {
+            gsap.to(submitButton, {
+                scale: 1.1,
+                duration: 0.3,
+                ease: 'power1.inOut'
+            });
+        });
+
+        submitButton.addEventListener('mouseleave', () => {
+            gsap.to(submitButton, {
+                scale: 1,
+                duration: 0.3,
+                ease: 'power1.inOut'
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Construct Gmail URL
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=KustomSignsOK@Gmail.com&su=Contact%20Form%20Submission&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0A%0AMessage:%20${encodeURIComponent(message)}`;
+
+            // Success animation
+            gsap.to('.contact-form', {
+                backgroundColor: '#4CAF50',
+                duration: 0.5,
+                onComplete: () => {
+                    // Open Gmail
+                    window.open(gmailUrl, '_blank');
+
+                    // Revert background and reset form
+                    gsap.to('.contact-form', {
+                        backgroundColor: '#b48801',
+                        duration: 0.5,
+                        delay: 1,
+                        onComplete: () => {
+                            // Reset form with animation
+                            gsap.to('.input-field', {
+                                opacity: 0,
+                                y: -20,
+                                duration: 0.5,
+                                onComplete: () => {
+                                    e.target.reset();
+                                    gsap.to('.input-field', {
+                                        opacity: 1,
+                                        y: 0,
+                                        duration: 0.5
+                                    });
+                                }
+                            });
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 
 
-    <!-- Footer -->
     <footer class="bg-black/50 border-t border-yellow-500/20 py-16">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-12">
+            <div class="grid md:grid-cols-4 gap-12">
                 <!-- Company Info -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
@@ -900,17 +1160,21 @@
                                     d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566-.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" />
                             </svg>
                         </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M23.642 7.787a2.541 2.541 0 00-1.791-1.791A33.954 33.954 0 0012 5.636a33.954 33.954 0 00-9.851 1.36 2.541 2.541 0 00-1.791 1.791A26.9 26.9 0 000 12c0 2.636.285 4.988.358 5.213a2.541 2.541 0 001.791 1.791A33.954 33.954 0 0012 20.364a33.954 33.954 0 009.851-1.36 2.541 2.541 0 001.791-1.791c.073-.225.358-2.577.358-5.213 0-2.636-.285-4.988-.358-5.213zm-9.948 9.234v-6.42l6.42-3.75-6.42 10.17z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
-
+    
                 <!-- Quick Links -->
                 <div>
                     <h3 class="font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#about" class="text-gray-400 hover:text-yellow-500 transition-colors">About Us</a>
-                        </li>
-                        <li><a href="#products"
-                                class="text-gray-400 hover:text-yellow-500 transition-colors">Products</a>
+                        <li><a href="#about" class="text-gray-400 hover:text-yellow-500 transition-colors">About Us</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-yellow-500 transition-colors">Products</a>
                         </li>
                         <li><a href="#gallery" class="text-gray-400 hover:text-yellow-500 transition-colors">Gallery</a>
                         </li>
@@ -918,25 +1182,66 @@
                         </li>
                     </ul>
                 </div>
-
-                <!-- Newsletter -->
+    
+                <!-- Contact Information -->
                 <div>
-                    <h3 class="font-bold mb-4">Newsletter</h3>
-                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and special offers.</p>
-                    <form class="flex gap-2">
-                        <input type="email" placeholder="Your Email"
-                            class="flex-1 bg-black/50 border border-yellow-500/20 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-500 transition-colors">
-                        <button
-                            class="bg-yellow-500 text-black px-6 py-2 rounded-md font-medium hover:bg-yellow-400 transition-colors">
-                            Subscribe
-                        </button>
-                    </form>
+                    <h3 class="font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                            <span>(555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <span>info@kustomsigns.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>123 Sign Street, Design City, ST 54321</span>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- Business Hours -->
+                <div>
+                    <h3 class="font-bold mb-4">Business Hours</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex justify-between">
+                            <span>Monday - Friday</span>
+                            <span>8:00 AM - 6:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Saturday</span>
+                            <span>9:00 AM - 2:00 PM</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Sunday</span>
+                            <span>Closed</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
+    
             <!-- Copyright -->
             <div class="mt-12 pt-8 border-t border-yellow-500/20 text-center text-gray-400">
-                <p>© 2024 KustomSigns. All rights reserved.</p>
+                <p>© 2024 KustomSigns. All rights reserved. | Designed with ❤️ in Design City</p>
             </div>
         </div>
     </footer>
@@ -1378,6 +1683,109 @@
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return emailRegex.test(email);
         }
+    </script>
+
+    <script>
+        const products = [
+                { name: 'LED Signs', description: 'Energy-efficient displays', image: 'led.png', fullDescription: 'Innovative LED signage solutions for dynamic brand communication.' },
+                { name: 'Channel Letters', description: 'Custom-made dimensional letters', image: 'channel.jpg', fullDescription: 'Custom-made dimensional letters designed to maximize brand visibility and create striking visual impact.' },
+                { name: 'Custom Banners', description: 'High-quality printed displays', image: 'custom.png', fullDescription: 'Versatile and eye-catching banners tailored to your brand needs.' }
+            ];
+
+            let productSequence = [2, 0, 1]; // Initial sequence: right, main, left
+            let isTransitioning = false;
+
+            function initializeCarousel() {
+                const carouselContainer = document.getElementById('carouselContainer');
+                carouselContainer.style.position = 'relative';
+                carouselContainer.style.overflow = 'hidden';
+                carouselContainer.style.height = '500px';
+
+                updateProductElements();
+                addClickListeners();
+            }
+
+            function updateProductElements() {
+                const leftProduct = document.getElementById('leftProduct');
+                const centerProduct = document.getElementById('centerProduct');
+                const rightProduct = document.getElementById('rightProduct');
+
+                // Assign product content
+                leftProduct.querySelector('img').src = products[productSequence[2]].image;
+                leftProduct.querySelector('h3').textContent = products[productSequence[2]].name;
+                leftProduct.querySelector('p').textContent = products[productSequence[2]].description;
+
+                centerProduct.querySelector('img').src = products[productSequence[1]].image;
+                centerProduct.querySelector('h3').textContent = products[productSequence[1]].name;
+                centerProduct.querySelector('p').textContent = products[productSequence[1]].fullDescription;
+
+                rightProduct.querySelector('img').src = products[productSequence[0]].image;
+                rightProduct.querySelector('h3').textContent = products[productSequence[0]].name;
+                rightProduct.querySelector('p').textContent = products[productSequence[0]].description;
+
+                // Set positions
+                leftProduct.style.position = centerProduct.style.position = rightProduct.style.position = 'absolute';
+                leftProduct.style.width = rightProduct.style.width = '30%';
+                centerProduct.style.width = '40%';
+
+                leftProduct.style.left = '0';
+                centerProduct.style.left = '30%';
+                rightProduct.style.right = '0';
+
+                leftProduct.style.opacity = rightProduct.style.opacity = '0.5';
+                centerProduct.style.opacity = '1';
+
+                leftProduct.style.zIndex = rightProduct.style.zIndex = '1';
+                centerProduct.style.zIndex = '10';
+            }
+
+            function animateSlide() {
+                if (isTransitioning) return;
+                isTransitioning = true;
+
+                const leftProduct = document.getElementById('leftProduct');
+                const centerProduct = document.getElementById('centerProduct');
+                const rightProduct = document.getElementById('rightProduct');
+
+                leftProduct.style.transition = centerProduct.style.transition = rightProduct.style.transition = 'all 0.5s ease';
+
+                leftProduct.style.left = '-30%';
+                centerProduct.style.left = '0';
+                rightProduct.style.right = '-30%';
+
+                setTimeout(() => {
+                    productSequence = [productSequence[2], productSequence[0], productSequence[1]];
+                    updateProductElements();
+                    isTransitioning = false;
+                }, 500);
+            }
+
+            function selectProduct(index) {
+                if (isTransitioning || index === 1) return;
+                isTransitioning = true;
+
+                if (index === 2) { // Selecting left product
+                    productSequence = [productSequence[2], productSequence[0], productSequence[1]];
+                } else if (index === 0) { // Selecting right product
+                    productSequence = [productSequence[1], productSequence[2], productSequence[0]];
+                }
+
+                updateProductElements();
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 500);
+            }
+
+            function addClickListeners() {
+                document.getElementById('leftProduct').addEventListener('click', () => selectProduct(2));
+                document.getElementById('rightProduct').addEventListener('click', () => selectProduct(0));
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                initializeCarousel();
+                setInterval(animateSlide, 3000);
+            });
+
     </script>
 </body>
 
