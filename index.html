@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" href="https://lh3.googleusercontent.com/d/14AeXL_TvfnZXsr5aCvKumhpUu9MBLw7v" type="image/x-icon">
     <title>Kustom Signs - Custom Signs Tailored to Perfection</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -210,16 +210,37 @@
         }
 
         @keyframes slideFromLeft {
-            from { transform: translateX(-100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
+
         @keyframes slideFromRight {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
+
         @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0.5; }
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0.5;
+            }
         }
     </style>
 </head>
@@ -230,7 +251,8 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center gap-3">
-                    <img src="logo.png" alt="Kustom Signs" class="w-12 h-12 ">
+                    <img src="https://lh3.googleusercontent.com/d/14AeXL_TvfnZXsr5aCvKumhpUu9MBLw7v" alt="Kustom Signs"
+                        class="w-12 h-12 ">
                     <span class="text-xl font-bold text-yellow-500">KustomSigns</span>
                 </div>
                 <div class="hidden lg:flex items-center gap-8">
@@ -240,8 +262,8 @@
                         class="text-white hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors">Products</a>
                     <a href="#gallery"
                         class="text-white hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors">Gallery</a>
-                    <a href="#about"
-                        class="text-white hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors">About</a>
+                    <a href="#faq"
+                        class="text-white hover:text-yellow-500 px-3 py-2 text-sm font-medium transition-colors">FAQ</a>
                     <a href="#contact"
                         class="bg-yellow-500 text-black px-6 py-2 rounded-md text-sm font-medium hover:bg-yellow-400 transition-all duration-300 hover:shadow-lg">
                         Contact Us
@@ -313,18 +335,23 @@
                     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[500px] rounded-full flex justify-center items-center"
                         style="background: transparent;">
                         <!-- Inner containers for each image -->
-                        <div class="absolute top-[-40px] left-[190px] transform -translate-x-1/2 w-72 h-72" style="margin-left: 130px;margin-bottom: 90px;">
-                            <img src="hero.jpg" alt="Main Sign"
+                        <div class="absolute top-[-40px] left-[190px] transform -translate-x-1/2 w-72 h-72"
+                            style="margin-left: 130px;margin-bottom: 90px;">
+                            <img src="https://lh3.googleusercontent.com/d/1gD1RD8ZSfbXrtON6c5mCPNMl-p_OPyX1"
+                                alt="Main Sign"
                                 class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
                         </div>
-                        <div class="absolute right-[180px] top-[-20px] w-72 h-72 transform translate-y-1/2" style="margin-bottom: 220px;margin-left: 180px;">
+                        <div class="absolute right-[180px] top-[-20px] w-72 h-72 transform translate-y-1/2"
+                            style="margin-bottom: 220px;margin-left: 180px;">
                             <!-- Added translate-y-1/4 -->
-                            <img src="favicon.png" alt="Sign Example"
+                            <img src="https://lh3.googleusercontent.com/d/1JK22sOzDRCT_SueqjSLSh8EtOhWtz8uJ"
+                                alt="Sign Example"
                                 class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
                         </div>
                         <div class="absolute right-0 left-1/2 w-72 h-72 transform translate-y-1/2">
                             <!-- Added translate-y-1/4 -->
-                            <img src="work2.jpg" alt="Sign Example"
+                            <img src="https://lh3.googleusercontent.com/d/1vDaz6pylDd2P3OHhSR0orSz0ZBA0e6-6"
+                                alt="Sign Example"
                                 class="w-full h-full object-cover rounded-full border-4 border-yellow-500 custom-shadow">
                         </div>
                     </div>
@@ -334,306 +361,1143 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-black/30">
+    <!-- Feature Section with Glassmorphic Design -->
+    <section class="py-24 bg-gradient-to-b from-black to-gray-900">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <center>
-                <h3 class="text-xl font-bold text-gold-400 bg-gradient-to-r bg-clip-text text-transparent"
-                    style="background-image: linear-gradient(to right, #ffab03, #ffab03, #ffab03); text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.107);">
-                    About</h3>
-            </center>
-            <br>
-            <div
-                class="max-w-4xl mx-auto bg-yellow-500/5 rounded-xl p-8 border border-yellow-500/20 custom-shadow hover-scale">
-                <h2 class="text-3xl font-bold mb-8 text-center">Custom Signs Tailored to Perfection</h2>
-                <div class="space-y-6 text-gray-300 leading-relaxed">
-                    <p>
-                        UKustom Signs LLC is a company with more than 22 years experience, we can help you from scratch
-                        to
-                        final sign installed and connected to electricity. We can create from simple banner - coming
-                        soon to
-                        a great channel letter sign, any size any color and design.
-                    </p>
-                    <p>
-                        We are specialized in:
-                    </p>
-                    <ul class="list-disc list-inside space-y-2 ml-4">
-                        <li>Channel Letters</li>
-                        <li>LED Signs</li>
-                        <li>Banners</li>
-                        <li>Transformers</li>
-                        <li>LED Lights</li>
-                    </ul>
-                    <p>
-                        We are licensed and insured with a team of professionals and quality products, just the best on
-                        materials. We always try to make the best for our customers, and not always has means the more
-                        expensive product or sign, let us know what you need and we will give you the best option based
-                        on
-                        the best of our experience on the publicity Sign Marketers.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-black">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <center>
-                <h3 class="text-xl mb-4 font-bold text-gold-400 bg-gradient-to-r bg-clip-text text-transparent"
-                    style="background-image: linear-gradient(to right, #ffab03, #ffab03, #ffab03); text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.107);">
+                <h3 class="text-xl mb-4 font-bold text-transparent bg-clip-text"
+                    style="background-image: linear-gradient(to right, #ffab03, #ffd203); text-shadow: 0 0 20px rgba(255, 171, 3, 0.3);">
                     Features</h3>
             </center>
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-white mb-4">Why Us?</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Wonder what sets us apart from others , well here is your answer
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Why Us?</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Wonder what sets us apart from others, well here is your
+                    answer
                 </p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-    
-    
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
                 <!-- Feature 1: Comprehensive Sign Solutions -->
-                <div class="p-6 rounded-lg space-y-4">
-                    <div
-                        class="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                        </svg>
+                <div class="group relative h-[450px] overflow-hidden rounded-2xl transition-all duration-500">
+                    <!-- Full-size background image -->
+                    <div class="absolute inset-0 w-full h-full overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/d/1n9F2hXfjecV4cyVCN1izZbJI5uOQ7_RX"
+                            alt="Comprehensive Sign Solutions"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/60 to-transparent">
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Comprehensive Sign Solutions</h3>
-                    <p class="text-gray-300">
-                        From simple banners like 'Coming Soon' to large channel letter signs, we offer signs in
-                        any size, color, and dimension, tailored to your needs.
-                    </p>
+
+                    <!-- Glassmorphic content container -->
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-6 backdrop-blur-md bg-white/10 border-t border-white/20 transition-all duration-500">
+                        <div
+                            class="w-12 h-12 mb-4 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Comprehensive Sign Solutions</h3>
+                        <p class="text-gray-200">
+                            From simple banners like 'Coming Soon' to large channel letter signs, we offer signs in
+                            any size, color, and dimension, tailored to your needs.
+                        </p>
+                    </div>
                 </div>
-    
+
                 <!-- Feature 2: Quality Materials & Professional Service -->
-                <div class="p-6 rounded-lg space-y-4">
-                    <div
-                        class="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-red-700 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                <div class="group relative h-[450px] overflow-hidden rounded-2xl transition-all duration-500">
+                    <!-- Full-size background image -->
+                    <div class="absolute inset-0 w-full h-full overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/d/1CkUszQLoCoLTA-qX68sJV9kACwMkDVnr"
+                            alt="Quality Materials"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-red-900/90 via-red-900/60 to-transparent">
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Quality Materials & Professional Service</h3>
-                    <p class="text-gray-300">
-                        We use only the best materials, including ballast, transformers, and LEDs, to ensure
-                        high-quality, durable signs and lighting solutions.
-                    </p>
+
+                    <!-- Glassmorphic content container -->
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-6 backdrop-blur-md bg-white/10 border-t border-white/20 transition-all duration-500">
+                        <div
+                            class="w-12 h-12 mb-4 rounded-full bg-gradient-to-r from-red-500 to-red-700 flex items-center justify-center shadow-lg shadow-red-500/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Quality Materials & Professional Service</h3>
+                        <p class="text-gray-200">
+                            We use only the best materials, including ballast, transformers, and LEDs, to ensure
+                            high-quality, durable signs and lighting solutions.
+                        </p>
+                    </div>
                 </div>
-    
+
                 <!-- Feature 3: Bonded & Insured -->
-                <div class="p-6 rounded-lg space-y-4">
-                    <div
-                        class="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-green-700 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                        </svg>
-    
-    
+                <div class="group relative h-[450px] overflow-hidden rounded-2xl transition-all duration-500">
+                    <!-- Full-size background image -->
+                    <div class="absolute inset-0 w-full h-full overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/d/19LZEHelPLMSQZr3ba0_f-h8NwYUhWF0y"
+                            alt="Bonded & Insured"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-green-900/90 via-green-900/60 to-transparent">
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Bonded & Insured</h3>
-                    <p class="text-gray-300">
-                        Kustom Signs LLC is fully bonded and insured, providing peace of mind with professional
-                        tech support for sign installation, repair, and maintenance.
-                    </p>
+
+                    <!-- Glassmorphic content container -->
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-6 backdrop-blur-md bg-white/10 border-t border-white/20 transition-all duration-500">
+                        <div
+                            class="w-12 h-12 mb-4 rounded-full bg-gradient-to-r from-green-500 to-green-700 flex items-center justify-center shadow-lg shadow-green-500/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Bonded & Insured</h3>
+                        <p class="text-gray-200">
+                            Kustom Signs LLC is fully bonded and insured, providing peace of mind with professional
+                            tech support for sign installation, repair, and maintenance.
+                        </p>
+                    </div>
                 </div>
-    
+
                 <!-- Feature 4: Tailored Solutions for Your Budget -->
-                <div class="p-6 rounded-lg space-y-4">
-                    <div
-                        class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-700 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-    
+                <div class="group relative h-[450px] overflow-hidden rounded-2xl transition-all duration-500">
+                    <!-- Full-size background image -->
+                    <div class="absolute inset-0 w-full h-full overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/d/1ArybdcTAQFMIkLbaal9xeBHyD8GLPRwU"
+                            alt="Budget Solutions"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-cyan-900/90 via-cyan-900/60 to-transparent">
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Tailored Solutions for Your Budget</h3>
-                    <p class="text-gray-300">
-                        We work closely with our clients to provide solutions that fit their needs and budget,
-                        focusing on getting the best value rather than the most expensive option.
-                    </p>
+
+                    <!-- Glassmorphic content container -->
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-6 backdrop-blur-md bg-white/10 border-t border-white/20 transition-all duration-500">
+                        <div
+                            class="w-12 h-12 mb-4 rounded-full bg-gradient-to-r from-cyan-500 to-cyan-700 flex items-center justify-center shadow-lg shadow-cyan-500/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Tailored Solutions for Your Budget</h3>
+                        <p class="text-gray-200">
+                            We work closely with our clients to provide solutions that fit their needs and budget,
+                            focusing on getting the best value rather than the most expensive option.
+                        </p>
+                    </div>
                 </div>
-    
+
                 <!-- Feature 5: Expert Sign Installation & Support -->
-                <div class="p-6 rounded-lg space-y-4">
-                    <div
-                        class="w-12 h-12 rounded-full bg-gradient-to-r from-yellow-500 to-yellow-700 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                        </svg>
+                <div class="group relative h-[450px] overflow-hidden rounded-2xl transition-all duration-500">
+                    <!-- Full-size background image -->
+                    <div class="absolute inset-0 w-full h-full overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/d/12Otjk5AAQRmP7E0tkfmdGpjAnPa89L3U"
+                            alt="Expert Installation"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-yellow-900/90 via-yellow-900/60 to-transparent">
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Expert Sign Installation & Support</h3>
-                    <p class="text-gray-300">
-                        Our team offers expert installation, along with support to fix, replace, and maintain signs
-                        and lighting, ensuring your signage works efficiently for years.
-                    </p>
+
+                    <!-- Glassmorphic content container -->
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-6 backdrop-blur-md bg-white/10 border-t border-white/20 transition-all duration-500">
+                        <div
+                            class="w-12 h-12 mb-4 rounded-full bg-gradient-to-r from-yellow-500 to-yellow-700 flex items-center justify-center shadow-lg shadow-yellow-500/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Expert Sign Installation & Support</h3>
+                        <p class="text-gray-200">
+                            Our team offers expert installation, along with support to fix, replace, and maintain signs
+                            and lighting, ensuring your signage works efficiently for years.
+                        </p>
+                    </div>
                 </div>
-    
+
                 <!-- Feature 6: Custom Sign Design -->
-                <div class="p-6 rounded-lg space-y-4">
-                    <div
-                        class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-purple-700 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
-                        </svg>
+                <div class="group relative h-[450px] overflow-hidden rounded-2xl transition-all duration-500">
+                    <!-- Full-size background image -->
+                    <div class="absolute inset-0 w-full h-full overflow-hidden">
+                        <img src="https://lh3.googleusercontent.com/d/1sn1co65C7C0lKhP5x0AwZrTm2MXdKbP4"
+                            alt="Custom Design"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/60 to-transparent">
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Custom Sign Design</h3>
-                    <p class="text-gray-300">
-                        Whether you need a simple banner or a custom-built sign, we offer personalized
-                        designs to suit your business, brand, and location.
-                    </p>
+
+                    <!-- Glassmorphic content container -->
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-6 backdrop-blur-md bg-white/10 border-t border-white/20 transition-all duration-500">
+                        <div
+                            class="w-12 h-12 mb-4 rounded-full bg-gradient-to-r from-purple-500 to-purple-700 flex items-center justify-center shadow-lg shadow-purple-500/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="w-6 h-6 text-white">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3">Custom Sign Design</h3>
+                        <p class="text-gray-200">
+                            Whether you need a simple banner or a custom-built sign, we offer personalized
+                            designs to suit your business, brand, and location.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <script>
+            // Wait for the page to load completely
+            window.addEventListener('load', function () {
+                // Make sure GSAP and ScrollTrigger are available
+                if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+                    gsap.registerPlugin(ScrollTrigger);
+
+                    // Initialize all feature boxes with 0 opacity and slight y offset
+                    gsap.set('.group', { opacity: 0, y: 50 });
+
+                    // Create a ScrollTrigger for each feature card
+                    gsap.utils.toArray('.group').forEach((card, i) => {
+                        gsap.to(card, {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.8,
+                            ease: "power3.out",
+                            scrollTrigger: {
+                                trigger: card,
+                                start: "top 85%", // Triggers when top of card enters bottom 85% of viewport
+                                toggleActions: "play none none none", // Play animation when entering, no reset
+                                once: true // Only trigger once
+                            },
+                            delay: i * 0.1 // Creates staggered effect
+                        });
+                    });
+                }
+            });
+        </script>
     </section>
-    
-    <script>
-        // GSAP Animations for Features Section
-        gsap.registerPlugin(ScrollTrigger);
 
-        gsap.from('.p-6.rounded-lg', {
-            scrollTrigger: {
-                trigger: '.p-6.rounded-lg',
-                start: 'top 80%', // Start the animation when the top of the trigger hits 80% of the viewport
-                toggleActions: 'play none none reverse'
-            },
-            opacity: 0,
-            y: 50,
-            duration: 0.8,
-            stagger: 0.2, // Stagger the animation of each feature
-            ease: "power2.out"
-        });
+    <section id="led-signs" class="relative w-full py-16 bg-black">
+        <div class="container mx-auto px-4 relative">
+            <center>
+                <h3 class="text-xl mb-4 font-bold bg-gradient-to-r bg-clip-text text-transparent"
+                    style="background-image: linear-gradient(to right, #ffab03, #ffab03, #ffab03); text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.107);">
+                    LED Technology
+                </h3>
+            </center>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">LED Sign Solutions</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Energy-efficient illuminated displays that bring your message
+                    to
+                    life day and night</p>
+            </div>
 
-    </script>
+            <div id="ledCarouselContainer" class="flex items-center justify-center space-x-4 relative overflow-hidden">
+                <!-- Left Product -->
+                <div id="ledLeftProduct"
+                    class="led-product w-1/5 opacity-50 transform -translate-x-12 transition-all duration-500 relative cursor-pointer">
+                    <img src="https://lh3.googleusercontent.com/d/1oEsKT8Hj_ANqVO57UhVXS0FVPj7Tfr8-"
+                        alt="LED Storefront Signs" class="w-full rounded-lg shadow-lg" />
+                    <div class="absolute bottom-4 left-4 right-4 bg-blue-900/70 rounded-lg p-3 text-white text-center">
+                        <h3 class="font-bold text-sm mb-1">Storefront Signs</h3>
+                        <p class="text-xs opacity-80">Attract more customers</p>
+                    </div>
+                </div>
+
+                <!-- Central Product -->
+                <div id="ledCenterProduct"
+                    class="led-product w-2/5 z-20 relative transform transition-all duration-500 cursor-pointer">
+                    <div class="relative overflow-hidden rounded-2xl">
+                        <img src="https://lh3.googleusercontent.com/d/1-htWE_xQB5xS8yGink2zYA_mDfn_pL9q"
+                            alt="LED Digital Displays" class="w-full rounded-2xl shadow-2xl" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent rounded-2xl">
+                        </div>
+                        <div
+                            class="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                            <div class="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-8 left-8 right-8 text-white">
+                        <h3 class="text-2xl font-bold mb-2">Digital LED Displays</h3>
+                        <p class="text-sm mb-4">Dynamic programmable displays with stunning clarity and vibrant colors
+                            for
+                            maximum impact.</p>
+                        <a href="#"
+                            class="inline-block bg-yellow-500 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-500 transition-colors">
+                            Explore Options
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Product -->
+                <div id="ledRightProduct"
+                    class="led-product w-1/5 opacity-50 transform translate-x-12 transition-all duration-500 relative cursor-pointer">
+                    <img src="https://lh3.googleusercontent.com/d/1rv6fH__gKyEZD4YmSsEA8UhZK2ElEJLh"
+                        alt="LED Monument Signs" class="w-full rounded-lg shadow-lg" />
+                    <div class="absolute bottom-4 left-4 right-4 bg-blue-900/70 rounded-lg p-3 text-white text-center">
+                        <h3 class="font-bold text-sm mb-1">Monument Signs</h3>
+                        <p class="text-xs opacity-80">Premium business identification</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Dots -->
+            <div class="flex justify-center mt-8">
+                <button class="led-dot w-3 h-3 rounded-full bg-yellow-200 mx-1 focus:outline-none"
+                    data-index="0"></button>
+                <button class="led-dot w-3 h-3 rounded-full bg-yellow-600 mx-1 focus:outline-none"
+                    data-index="1"></button>
+                <button class="led-dot w-3 h-3 rounded-full bg-yellow-200 mx-1 focus:outline-none"
+                    data-index="2"></button>
+            </div>
+
+            <!-- Arrow Controls -->
+            <button id="ledPrevBtn"
+                class="absolute left-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 text-white flex items-center justify-center hover:bg-black/50 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button id="ledNextBtn"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2 w-10 h-10 rounded-full bg-black/30 text-white flex items-center justify-center hover:bg-black/50 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const products = [
+                    {
+                        image: "https://lh3.googleusercontent.com/d/1oEsKT8Hj_ANqVO57UhVXS0FVPj7Tfr8-",
+                        title: "Storefront Signs",
+                        description: "Attract more customers"
+                    },
+                    {
+                        image: "https://lh3.googleusercontent.com/d/1-htWE_xQB5xS8yGink2zYA_mDfn_pL9q",
+                        title: "Digital LED Displays",
+                        description: "Dynamic programmable displays with stunning clarity and vibrant colors for maximum impact."
+                    },
+                    {
+                        image: "https://lh3.googleusercontent.com/d/1rv6fH__gKyEZD4YmSsEA8UhZK2ElEJLh",
+                        title: "Monument Signs",
+                        description: "Premium business identification"
+                    }
+                ];
+
+                let currentIndex = 1; // Start with second item active (center)
+
+                const updateCarousel = () => {
+                    // Update products positions
+                    const leftIndex = (currentIndex - 1 + products.length) % products.length;
+                    const centerIndex = currentIndex;
+                    const rightIndex = (currentIndex + 1) % products.length;
+
+                    // Update left product
+                    const leftProduct = document.getElementById('ledLeftProduct');
+                    leftProduct.querySelector('img').src = products[leftIndex].image;
+                    leftProduct.querySelector('h3').textContent = products[leftIndex].title;
+
+                    // Update center product
+                    const centerProduct = document.getElementById('ledCenterProduct');
+                    centerProduct.querySelector('img').src = products[centerIndex].image;
+                    centerProduct.querySelector('h3').textContent = products[centerIndex].title;
+                    centerProduct.querySelector('p').textContent = products[centerIndex].description;
+
+                    // Update right product
+                    const rightProduct = document.getElementById('ledRightProduct');
+                    rightProduct.querySelector('img').src = products[rightIndex].image;
+                    rightProduct.querySelector('h3').textContent = products[rightIndex].title;
+
+                    // Update dots
+                    document.querySelectorAll('.led-dot').forEach((dot, index) => {
+                        dot.classList.toggle('bg-yellow-600', index === currentIndex);
+                        dot.classList.toggle('bg-yellow-200', index !== currentIndex);
+                    });
+
+                    // Add slight animation effect
+                    centerProduct.classList.add('scale-105');
+                    setTimeout(() => {
+                        centerProduct.classList.remove('scale-105');
+                    }, 300);
+                };
+
+                // Handle next button click
+                document.getElementById('ledNextBtn').addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % products.length;
+                    updateCarousel();
+                });
+
+                // Handle previous button click
+                document.getElementById('ledPrevBtn').addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + products.length) % products.length;
+                    updateCarousel();
+                });
+
+                // Handle dot clicks
+                document.querySelectorAll('.led-dot').forEach((dot) => {
+                    dot.addEventListener('click', () => {
+                        currentIndex = parseInt(dot.dataset.index);
+                        updateCarousel();
+                    });
+                });
+
+                // Handle product clicks to make them center
+                document.getElementById('ledLeftProduct').addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + products.length) % products.length;
+                    updateCarousel();
+                });
+
+                document.getElementById('ledRightProduct').addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % products.length;
+                    updateCarousel();
+                });
+
+                // Auto-rotate carousel
+                let autoRotate = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % products.length;
+                    updateCarousel();
+                }, 5000);
+
+                // Pause auto-rotation when hovering
+                const container = document.getElementById('ledCarouselContainer');
+                container.addEventListener('mouseenter', () => {
+                    clearInterval(autoRotate);
+                });
+
+                container.addEventListener('mouseleave', () => {
+                    autoRotate = setInterval(() => {
+                        currentIndex = (currentIndex + 1) % products.length;
+                        updateCarousel();
+                    }, 5000);
+                });
+            });
+        </script>
+    </section>
+
+
 
     <!-- Gallery Section -->
-    <section id="gallery" class="py-24">
-        <div class="container mx-auto px-4">
+    <section id="gallery" class="py-24 bg-black">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-yellow-100 text-yellow-600 text-sm font-medium mb-4">
+                    Our Work
+                </span>
+                <h2 class="text-4xl font-bold text-white">Project Gallery</h2> <!-- Added text-white -->
+            </div>
+
+            <!-- Gallery Filter -->
+            <div class="flex flex-wrap justify-center mb-12 gap-3">
+                <button
+                    class="gallery-tab px-6 py-2 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition-all duration-300 bg-white shadow-sm"
+                    data-filter="all">
+                    All Projects
+                </button>
+                <button
+                    class="gallery-tab px-6 py-2 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition-all duration-300 bg-white shadow-sm"
+                    data-filter="box-sign">
+                    Box Signs
+                </button>
+                <button
+                    class="gallery-tab px-6 py-2 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition-all duration-300 bg-white shadow-sm"
+                    data-filter="channel-letter">
+                    Channel Letters
+                </button>
+                <button
+                    class="gallery-tab px-6 py-2 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition-all duration-300 bg-white shadow-sm"
+                    data-filter="logo-design">
+                    Logo Design
+                </button>
+                <button
+                    class="gallery-tab px-6 py-2 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition-all duration-300 bg-white shadow-sm"
+                    data-filter="lettering">
+                    Lettering
+                </button>
+                <button
+                    class="gallery-tab px-6 py-2 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition-all duration-300 bg-white shadow-sm"
+                    data-filter="magnets">
+                    Magnets
+                </button>
+                <!--<button
+                    class="gallery-tab px-6 py-2 rounded-full text-gray-700 hover:bg-yellow-500 hover:text-white transition-all duration-300 bg-white shadow-sm"
+                    data-filter="led">
+                    LED Displays
+                </button>-->
+            </div>
+
+            <!-- Gallery Content -->
+            <div id="gallery-content" class="relative min-h-screen">
+                <!-- Gallery Items will appear here -->
+
+                <!-- Box Sign Example -->
+                <div class="gallery-item mb-24" data-category="box-sign">
+                    <div class="flex flex-col md:flex-row gap-16 items-center">
+                        <div class="w-full md:w-1/2 gallery-image-container overflow-hidden rounded-2xl">
+                            <img src="https://lh3.googleusercontent.com/d/1oFTlTGs3qt3Et-SCU-SzGMPJ3GqtcsGe"
+                                alt="Box Sign Example"
+                                class="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="w-full md:w-1/2 gallery-content-container">
+                            <span
+                                class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-medium rounded-full mb-4">Box
+                                Sign</span>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Premium Box Sign Solutions</h3>
+                            <!-- Added text-white -->
+                            <p class="text-white mb-6 leading-relaxed"> <!-- Changed to text-white -->
+                                Our custom box signs are designed to make your business stand out with vibrant
+                                illumination
+                                and professional appeal. Built with durability in mind, these signs provide excellent
+                                visibility day and night.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Premium LED lighting</span> <!-- Changed to text-white -->
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Weather-resistant</span> <!-- Changed to text-white -->
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Custom design</span> <!-- Changed to text-white -->
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Professional installation</span>
+                                    <!-- Changed to text-white -->
+                                </div>
+                            </div>
+                            <div class="flex items-center text-white text-sm"> <!-- Changed to text-white -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span>Dallas, TX</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Channel Letter Example -->
+                <div class="gallery-item mb-24" data-category="channel-letter">
+                    <div class="flex flex-col md:flex-row-reverse gap-16 items-center">
+                        <div class="w-full md:w-1/2 gallery-image-container overflow-hidden rounded-2xl">
+                            <img src="https://lh3.googleusercontent.com/d/1YYjCYTPDCsynVFnEqGJa6PWkOtAC06fJ"
+                                alt="Channel Letter Example"
+                                class="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="w-full md:w-1/2 gallery-content-container">
+                            <span
+                                class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-medium rounded-full mb-4">Channel
+                                Letter</span>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Dimensional Channel Letters</h3>
+                            <!-- Added text-white -->
+                            <p class="text-white mb-6 leading-relaxed"> <!-- Changed to text-white -->
+                                Channel letters provide a classic yet modern signage solution with dimensional appeal
+                                that
+                                catches the eye from any angle. These custom-built letters bring brands to life with
+                                vibrant
+                                illumination.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">LED illumination</span> <!-- Changed to text-white -->
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Custom color matching</span> <!-- Changed to text-white -->
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Aluminum construction</span> <!-- Changed to text-white -->
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Long-distance visibility</span>
+                                    <!-- Changed to text-white -->
+                                </div>
+                            </div>
+                            <div
+                                class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-600 text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>40% visibility increase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Logo Design Example -->
+                <div class="gallery-item mb-24 opacity-0 hidden" data-category="logo-design">
+                    <div class="flex flex-col md:flex-row gap-16 items-center">
+                        <div class="w-full md:w-1/2 gallery-image-container overflow-hidden rounded-2xl">
+                            <img src="https://lh3.googleusercontent.com/d/1ccxfTke3tVJXnm9XjVRvFqm-75GElNmy"
+                                alt="Logo Design Example"
+                                class="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="w-full md:w-1/2 gallery-content-container">
+                            <span
+                                class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-medium rounded-full mb-4">Logo
+                                Design</span>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Creative Logo Designs</h3>
+                            <p class="text-white mb-6 leading-relaxed">
+                                Our logo design services help businesses create a unique and memorable brand identity.
+                                We
+                                focus on crafting logos that are not only visually appealing but also effectively
+                                communicate your brand's core values.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Unique concepts</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Brand consistency</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Versatile formats</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Professional consultation</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center text-white text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span>Proven track record</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lettering Example -->
+                <div class="gallery-item mb-24 opacity-0 hidden" data-category="lettering">
+                    <div class="flex flex-col md:flex-row-reverse gap-16 items-center">
+                        <div class="w-full md:w-1/2 gallery-image-container overflow-hidden rounded-2xl">
+                            <img src="https://lh3.googleusercontent.com/d/1S4hN1IkGABiLEnk3A2cBnyVeLQBwi8X1"
+                                alt="Lettering Example"
+                                class="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="w-full md:w-1/2 gallery-content-container">
+                            <span
+                                class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-medium rounded-full mb-4">Lettering</span>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Custom Lettering Services</h3>
+                            <p class="text-white mb-6 leading-relaxed">
+                                Our custom lettering service provides elegant and precise lettering for various
+                                applications, including storefronts, vehicles, and interior spaces. We ensure a clean,
+                                professional look that enhances your brand's visibility.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">High-quality materials</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Precise application</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Custom designs</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Various applications</span>
+                                </div>
+                            </div>
+                            <div
+                                class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-600 text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Satisfaction guaranteed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Magnets Example -->
+                <div class="gallery-item mb-24 opacity-0 hidden" data-category="magnets">
+                    <div class="flex flex-col md:flex-row gap-16 items-center">
+                        <div class="w-full md:w-1/2 gallery-image-container overflow-hidden rounded-2xl">
+                            <img src="https://lh3.googleusercontent.com/d/1kPiW0jXdM0uNneXjiXzhO9bE6GfSk1sV"
+                                alt="Magnet Design Example"
+                                class="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="w-full md:w-1/2 gallery-content-container">
+                            <span
+                                class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-medium rounded-full mb-4">Magnets</span>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Custom Magnet Designs</h3>
+                            <p class="text-white mb-6 leading-relaxed">
+                                Our custom magnets are perfect for promotional giveaways, business advertising, and
+                                personal
+                                use. We offer high-quality, durable magnets that can be customized to any shape and
+                                size.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Durable materials</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-                            <path fill-rule="
+                                                evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Custom shapes & sizes</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">High-quality prints</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Promotional & personal use</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center text-white text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                                </svg>
+                                <span>Fast turnaround</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- LED Digital Sign Example 
+                <div class="gallery-item mb-24" data-category="led">
+                    <div class="flex flex-col md:flex-row-reverse gap-16 items-center">
+                        <div class="w-full md:w-1/2 gallery-image-container overflow-hidden rounded-2xl">
+                            <img src="https://lh3.googleusercontent.com/d/1vUOo3T5U29IoP9paWQggtIbtdIHy02kC"
+                                alt="LED Digital Sign"
+                                class="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="w-full md:w-1/2 gallery-content-container">
+                            <span
+                                class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-medium rounded-full mb-4">LED
+                                Digital</span>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Dynamic LED Displays</h3>
+                   
+                            <p class="text-white mb-6 leading-relaxed"> 
+                                Our LED digital signage solutions give businesses the power to display dynamic, changing
+                                content that captures attention. These programmable displays allow for instant updates
+                                and
+                                eye-catching animations.
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 mb-8">
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">High-resolution panels</span>
+    
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Content management</span> 
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Scheduling features</span> 
+                                </div>
+                                <div class="flex items-start">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600 mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <span class="text-white">Weather-resistant</span> 
+                                </div>
+                            </div>
+                            <div
+                                class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-600 text-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>35% foot traffic increase</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item mb-24 opacity-0 hidden" data-category="led">
+                    <div class="flex flex-col md:flex-row-reverse gap-16 items-center">
+                        <div class="w-full md:w-1/2 gallery-image-container overflow-hidden rounded-2xl">
+                            <img src="https://lh3.googleusercontent.com/d/1axTpiB3DwOhvKTWAYP2CdoAvn89MH6kY"
+                                alt="LED Digital Sign"
+                                class="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="w-full md:w-1/2 gallery-content-container">
+                            <span
+                                class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-medium rounded-full mb-4">LED
+                                Digital</span>
+                            <h3 class="text-2xl font-bold mb-4 text-white">LED Sign</h3>
+                            <p class="text-white mb-6 leading-relaxed">
+                                Quality design
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item mb-24 opacity-0 hidden" data-category="led">
+                    <div class="flex flex-col md:flex-row gap-16 items-center">
+                        <div class="w-full md:w-1/2 gallery-image-container overflow-hidden rounded-2xl">
+                            <img src="https://lh3.googleusercontent.com/d/1oEsKT8Hj_ANqVO57UhVXS0FVPj7Tfr8-"
+                                alt="LED Sign 3"
+                                class="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="w-full md:w-1/2 gallery-content-container">
+                            <span
+                                class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-medium rounded-full mb-4">LED
+                                Digital</span>
+                            <h3 class="text-2xl font-bold mb-4 text-white">LED Sign</h3>
+                            <p class="text-white mb-6 leading-relaxed">Quality design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item mb-24 opacity-0 hidden" data-category="led">
+                    <div class="flex flex-col md:flex-row-reverse gap-16 items-center">
+                        <div class="w-full md:w-1/2 gallery-image-container overflow-hidden rounded-2xl">
+                            <img src="https://lh3.googleusercontent.com/d/1wk2C8dutXP64_lssrCylPgoh4CIxXL3V"
+                                alt="LED Sign 4"
+                                class="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="w-full md:w-1/2 gallery-content-container">
+                            <span
+                                class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-medium rounded-full mb-4">LED
+                                Digital</span>
+                            <h3 class="text-2xl font-bold mb-4 text-white">LED Sign</h3>
+                            <p class="text-white mb-6 leading-relaxed">Quality design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item mb-24 opacity-0 hidden" data-category="led">
+                    <div class="flex flex-col md:flex-row gap-16 items-center">
+                        <div class="w-full md:w-1/2 gallery-image-container overflow-hidden rounded-2xl">
+                            <img src="https://lh3.googleusercontent.com/d/1-htWE_xQB5xS8yGink2zYA_mDfn_pL9q"
+                                alt="LED Sign 5"
+                                class="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="w-full md:w-1/2 gallery-content-container">
+                            <span
+                                class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-medium rounded-full mb-4">LED
+                                Digital</span>
+                            <h3 class="text-2xl font-bold mb-4 text-white">LED Sign</h3>
+                            <p class="text-white mb-6 leading-relaxed">Quality design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item mb-24 opacity-0 hidden" data-category="led">
+                    <div class="flex flex-col md:flex-row-reverse gap-16 items-center">
+                        <div class="w-full md:w-1/2 gallery-image-container overflow-hidden rounded-2xl">
+                            <img src="https://lh3.googleusercontent.com/d/1siOKnB2sKFeSPCl5IKOdxyBz5KomO9tJ"
+                                alt="LED Sign 6"
+                                class="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="w-full md:w-1/2 gallery-content-container">
+                            <span
+                                class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-medium rounded-full mb-4">LED
+                                Digital</span>
+                            <h3 class="text-2xl font-bold mb-4 text-white">LED Sign</h3>
+                            <p class="text-white mb-6 leading-relaxed">Quality design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item mb-24 opacity-0 hidden" data-category="led">
+                    <div class="flex flex-col md:flex-row gap-16 items-center">
+                        <div class="w-full md:w-1/2 gallery-image-container overflow-hidden rounded-2xl">
+                            <img src="https://lh3.googleusercontent.com/d/1rv6fH__gKyEZD4YmSsEA8UhZK2ElEJLh"
+                                alt="LED Sign 7"
+                                class="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700">
+                        </div>
+                        <div class="w-full md:w-1/2 gallery-content-container">
+                            <span
+                                class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 text-xs font-medium rounded-full mb-4">LED
+                                Digital</span>
+                            <h3 class="text-2xl font-bold mb-4 text-white">LED Sign</h3>
+                            <p class="text-white mb-6 leading-relaxed">Quality design</p>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="products" class="relative w-full py-16 bg-black">
+        <div class="container mx-auto px-4 relative">
             <center>
                 <h3 class="text-xl mb-4 font-bold text-gold-400 bg-gradient-to-r bg-clip-text text-transparent"
                     style="background-image: linear-gradient(to right, #ffab03, #ffab03, #ffab03); text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.107);">
-                    Gallery</h3>
+                    Products</h3>
             </center>
-            <h2 class="text-3xl font-bold text-center mb-12">Our Gallery</h2>
-    
-            <!-- Gallery Tabs -->
-            <div class="flex justify-center mb-8 space-x-4">
-                <button
-                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
-                    data-filter="all">All</button>
-                <button
-                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
-                    data-filter="box-sign">Box Sign</button>
-                <button
-                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
-                    data-filter="channel-letter">Channel Letter</button>
-                <button
-                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
-                    data-filter="logo-design">Logo Design</button>
-                <button
-                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
-                    data-filter="lettering">Lettering</button>
-                <button
-                    class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
-                    data-filter="magnets">Magnets</button>
-                <button class="gallery-tab px-4 py-2 rounded-full text-white bg-yellow-500 hover:bg-yellow-600 transition-colors"
-                    data-filter="led">LED Digital Signs</button>
-            </div>
-    
-            <!-- Gallery Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="gallery-grid">
-                <!-- Gallery Cards -->
-                <div class="gallery-card relative rounded-lg overflow-hidden" data-category="box-sign">
-                    <img src="product1.png" alt="Box Sign 1" class="w-full h-64 object-cover">
-                    <div class="absolute bottom-0 w-full bg-black/70 p-4 text-white text-center">
-                        <h3 class="text-lg font-bold">Box Sign Example</h3>
-                        <p>Modern and effective box sign</p>
-                    </div>
-                </div>
-    
-                <div class="gallery-card relative rounded-lg overflow-hidden" data-category="channel-letter">
-                    <img src="product2.png" alt="Channel Letter 1" class="w-full h-64 object-cover">
-                    <div class="absolute bottom-0 w-full bg-black/70 p-4 text-white text-center">
-                        <h3 class="text-lg font-bold">Channel Letter Project</h3>
-                        <p>Professional channel lettering solution</p>
-                    </div>
-                </div>
-    
-                <div class="gallery-card relative rounded-lg overflow-hidden" data-category="logo-design">
-                    <img src="product3.png" alt="Logo Design 1" class="w-full h-64 object-cover">
-                    <div class="absolute bottom-0 w-full bg-black/70 p-4 text-white text-center">
-                        <h3 class="text-lg font-bold">Creative Logo Design</h3>
-                        <p>Eye-catching logo design</p>
-                    </div>
-                </div>
-    
-                <div class="gallery-card relative rounded-lg overflow-hidden" data-category="lettering">
-                    <img src="product4.png" alt="Lettering Design 1" class="w-full h-64 object-cover">
-                    <div class="absolute bottom-0 w-full bg-black/70 p-4 text-white text-center">
-                        <h3 class="text-lg font-bold">Custom Lettering Work</h3>
-                        <p>Beautiful custom lettering on a glass door</p>
-                    </div>
-                </div>
-    
-                <div class="gallery-card relative rounded-lg overflow-hidden" data-category="magnets">
-                    <img src="product5.png" alt="Magnet Design 1" class="w-full h-64 object-cover">
-                    <div class="absolute bottom-0 w-full bg-black/70 p-4 text-white text-center">
-                        <h3 class="text-lg font-bold">Magnet Sign Project</h3>
-                        <p>Custom magnets</p>
-                    </div>
-                </div>
-    
-                <div class="gallery-card relative rounded-lg overflow-hidden" data-category="led">
-                    <img src="product6.png" alt="Magnet Design 2" class="w-full h-64 object-cover">
-                    <div class="absolute bottom-0 w-full bg-black/70 p-4 text-white text-center">
-                        <h3 class="text-lg font-bold">LED Sign</h3>
-                        <p>Quality design</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="relative w-full py-16 bg-black">
-        <div class="container mx-auto px-4 relative">
-            <center><h3 class="text-xl mb-4 font-bold text-gold-400 bg-gradient-to-r bg-clip-text text-transparent"
-                style="background-image: linear-gradient(to right, #ffab03, #ffab03, #ffab03); text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.107);">
-                Products</h3></center>
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-white mb-4">Our Products</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">Innovative signage solutions that transform your brand's visual
+                <p class="text-gray-400 max-w-2xl mx-auto">Innovative signage solutions that transform your brand's
+                    visual
                     identity</p>
             </div>
-    
+
             <div id="carouselContainer" class="flex items-center justify-center space-x-4 relative overflow-hidden">
                 <!-- Left Product -->
                 <div id="leftProduct"
                     class="w-[20%] opacity-50 transform -translate-x-12 transition-all duration-300 relative">
-                    <img src="led.png" alt="LED Signs" class="w-full rounded-lg shadow-lg" />
+                    <img src="https://lh3.googleusercontent.com/d/1vl1Xo4b38ougc618tJqcpUpMbMvQVN9I" alt="LED Signs"
+                        class="w-full rounded-lg shadow-lg" />
                     <div class="absolute bottom-4 left-4 right-4 bg-black/60 rounded-lg p-3 text-white text-center">
                         <h3 class="font-bold text-sm mb-1">LED Signs</h3>
                         <p class="text-xs opacity-80">Energy-efficient displays</p>
                     </div>
                 </div>
-    
+
                 <!-- Central Product -->
                 <div id="centerProduct" class="w-[40%] z-20 relative transform transition-all duration-300">
-                    <img src="channel.jpg" alt="Channel Letters" class="w-full rounded-2xl shadow-2xl" />
+                    <img src="https://lh3.googleusercontent.com/d/12TPlFGmuXXZJ_5BkTXWCD-UxQDBQ8q6W"
+                        alt="Channel Letters" class="w-full rounded-2xl shadow-2xl" />
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-2xl"></div>
                     <div class="absolute bottom-8 left-8 right-8 text-white">
                         <h3 class="text-2xl font-bold mb-2">Channel Letters</h3>
-                        <p class="text-sm mb-4">Custom-made dimensional letters designed to maximize brand visibility and
+                        <p class="text-sm mb-4">Custom-made dimensional letters designed to maximize brand visibility
+                            and
                             create striking visual impact.</p>
                         <a href="#"
                             class="inline-block bg-yellow-500 text-black px-4 py-2 rounded-lg text-sm hover:bg-yellow-400 transition-colors">
@@ -641,11 +1505,12 @@
                         </a>
                     </div>
                 </div>
-    
+
                 <!-- Right Product -->
                 <div id="rightProduct"
                     class="w-[20%] opacity-50 transform translate-x-12 transition-all duration-300 relative">
-                    <img src="custom.png" alt="Custom Banners" class="w-full rounded-lg shadow-lg" />
+                    <img src="https://lh3.googleusercontent.com/d/1wj32RP3ufw8q_hYAb7jXmvgcy-sIo6sn"
+                        alt="Custom Banners" class="w-full rounded-lg shadow-lg" />
                     <div class="absolute bottom-4 left-4 right-4 bg-black/60 rounded-lg p-3 text-white text-center">
                         <h3 class="font-bold text-sm mb-1">Custom Banners</h3>
                         <p class="text-xs opacity-80">High-quality printed displays</p>
@@ -655,9 +1520,9 @@
         </div>
     </section>
 
-    
 
-    
+
+
 
     <section id="client-feedback" class="py-16 px-6 relative  text-gray-100 text-left md:text-center">
         <div class="container mx-auto relative">
@@ -692,8 +1557,8 @@
                                 more visible, and has significantly increased foot traffic!"
                             </p>
                             <div class="flex items-center space-x-4">
-                                <img src="client1.jpg" alt="Client Photo"
-                                    class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
+                                <img src="https://lh3.googleusercontent.com/d/1O-y0QJtRkH4jRUp_oFtmT-aBgTz-7o-R"
+                                    alt="Client Photo" class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
                                 <div>
                                     <h4 class="text-lg text-white font-bold">John Doe</h4>
                                     <div class="text-yellow-400 text-sm">
@@ -718,8 +1583,8 @@
                                 letters. They truly understood our brand and delivered a sign that reflects our values."
                             </p>
                             <div class="flex items-center space-x-4">
-                                <img src="client2.jpg" alt="Client Photo"
-                                    class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
+                                <img src="https://lh3.googleusercontent.com/d/1QIs3o0UVSFP1lTyNSdKQ2jdIiH8zFTZe"
+                                    alt="Client Photo" class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
                                 <div>
                                     <h4 class="text-lg text-white font-bold">Jane Smith</h4>
                                     <div class="text-yellow-400 text-sm">
@@ -745,8 +1610,8 @@
                                 customers."
                             </p>
                             <div class="flex items-center space-x-4">
-                                <img src="client3.jpg" alt="Client Photo"
-                                    class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
+                                <img src="https://lh3.googleusercontent.com/d/1otNDDBHBz0P_r4_OhG4wNOSxr4UkapTa"
+                                    alt="Client Photo" class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
                                 <div>
                                     <h4 class="text-lg text-white font-bold">Michael Johnson</h4>
                                     <div class="text-yellow-400 text-sm">
@@ -772,8 +1637,8 @@
                                 anyone looking for luxury properties."
                             </p>
                             <div class="flex items-center space-x-4">
-                                <img src="client4.png" alt="Client Photo"
-                                    class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
+                                <img src="https://lh3.googleusercontent.com/d/1oaOA8aoOXpzO2qI-6_OnU2YVqpWIH930"
+                                    alt="Client Photo" class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
                                 <div>
                                     <h4 class="text-lg text-white font-bold">Jane Smith</h4>
                                     <div class="text-yellow-400 text-sm">
@@ -799,8 +1664,8 @@
                                 home!"
                             </p>
                             <div class="flex items-center space-x-4">
-                                <img src="client5.png" alt="Client Photo"
-                                    class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
+                                <img src="https://lh3.googleusercontent.com/d/1plRrRKGtyhnRPpTynhnhWemeKSc0oeED"
+                                    alt="Client Photo" class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
                                 <div>
                                     <h4 class="text-lg text-white font-bold">Robert Clark</h4>
                                     <div class="text-yellow-400 text-sm">
@@ -826,8 +1691,8 @@
                                 experience!"
                             </p>
                             <div class="flex items-center space-x-4">
-                                <img src="client6.png" alt="Client Photo"
-                                    class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
+                                <img src="https://lh3.googleusercontent.com/d/16wz2p0gVvEd33ct09X9EYsOcZQ0HFI4T"
+                                    alt="Client Photo" class="w-12 h-12 rounded-full border-2 border-[#c5912c]" />
                                 <div>
                                     <h4 class="text-lg text-white font-bold">Jessica Williams</h4>
                                     <div class="text-yellow-400 text-sm">
@@ -951,22 +1816,23 @@
         </div>
     </section>
 
-    <section class="py-16">
+    <section id="contact" class="py-16">
         <div class="container mx-auto px-4">
             <div class="contact-container grid md:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-xl">
                 <!-- Left Side: Contact Image -->
                 <div class="relative contact-image">
-                    <img src="Anhk_SunDesert.jpg" alt="Contact Us" class="w-full h-full object-cover absolute inset-0">
+                    <img src="https://lh3.googleusercontent.com/d/1AiA7h-PIL5H3M-RKL6CbVmRlMFeVSEi5"
+                        alt="Image from Google Drive" class="w-full h-full object-cover absolute">
                     <div class="relative z-10 h-full flex items-center justify-center"
                         style="background: rgba(180, 136, 1, 0.3);"></div>
                 </div>
-    
+
                 <!-- Right Side: Contact Form -->
                 <div class="bg-[#b48801] p-8 relative contact-form">
                     <div class="text-center mb-8">
                         <h2 class="text-3xl font-bold text-white form-title">Contact Us</h2>
                     </div>
-    
+
                     <form id="contact-form" class="space-y-4">
                         <div class="form-input">
                             <label for="name" class="block text-sm font-medium text-white mb-2">Your Name</label>
@@ -974,21 +1840,21 @@
                                 class="w-full px-4 py-2 rounded-xl border border-white/30 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:border-white input-field"
                                 placeholder="Enter your name" required>
                         </div>
-    
+
                         <div class="form-input">
                             <label for="email" class="block text-sm font-medium text-white mb-2">Your Email</label>
                             <input type="email" id="email" name="email"
                                 class="w-full px-4 py-2 rounded-xl border border-white/30 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:border-white input-field"
                                 placeholder="Enter your email" required>
                         </div>
-    
+
                         <div class="form-input">
                             <label for="message" class="block text-sm font-medium text-white mb-2">Your Message</label>
                             <textarea id="message" name="message" rows="4"
                                 class="w-full px-4 py-2 rounded-xl border border-white/30 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:border-white input-field"
                                 placeholder="Enter your message" required></textarea>
                         </div>
-    
+
                         <div class="form-submit">
                             <button type="submit"
                                 class="w-full bg-white text-[#b48801] py-2 rounded-xl hover:bg-white/90 transition duration-300 font-bold submit-button">
@@ -1000,33 +1866,33 @@
             </div>
         </div>
     </section>
-    
+
     <style>
         /* Additional animations */
         .input-field:focus {
             transform: scale(1.02);
             transition: transform 0.3s ease;
         }
-    
+
         .submit-button:hover {
             animation: pulse 1s infinite;
         }
-    
+
         @keyframes pulse {
             0% {
                 transform: scale(1);
             }
-    
+
             50% {
                 transform: scale(1.05);
             }
-    
+
             100% {
                 transform: scale(1);
             }
         }
     </style>
-    
+
     <script>
         // GSAP Animations
         gsap.registerPlugin(ScrollTrigger);
@@ -1143,7 +2009,8 @@
                 <!-- Company Info -->
                 <div class="space-y-4">
                     <div class="flex items-center gap-3">
-                        <img src="logo.png" alt="Kustom Signs" class="w-12 h-12">
+                        <img src="https://lh3.googleusercontent.com/d/14AeXL_TvfnZXsr5aCvKumhpUu9MBLw7v"
+                            alt="Kustom Signs" class="w-12 h-12">
                         <span class="font-bold text-lg">KustomSigns</span>
                     </div>
                     <p class="text-gray-400">Creating impactful signage solutions since 2001</p>
@@ -1160,21 +2027,16 @@
                                     d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566-.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" />
                             </svg>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition-colors">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M23.642 7.787a2.541 2.541 0 00-1.791-1.791A33.954 33.954 0 0012 5.636a33.954 33.954 0 00-9.851 1.36 2.541 2.541 0 00-1.791 1.791A26.9 26.9 0 000 12c0 2.636.285 4.988.358 5.213a2.541 2.541 0 001.791 1.791A33.954 33.954 0 0012 20.364a33.954 33.954 0 009.851-1.36 2.541 2.541 0 001.791-1.791c.073-.225.358-2.577.358-5.213 0-2.636-.285-4.988-.358-5.213zm-9.948 9.234v-6.42l6.42-3.75-6.42 10.17z" />
-                            </svg>
-                        </a>
                     </div>
                 </div>
-    
+
                 <!-- Quick Links -->
                 <div>
                     <h3 class="font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#about" class="text-gray-400 hover:text-yellow-500 transition-colors">About Us</a></li>
-                        <li><a href="#products" class="text-gray-400 hover:text-yellow-500 transition-colors">Products</a>
+                        <li><a href="#faq" class="text-gray-400 hover:text-yellow-500 transition-colors">FAQ</a></li>
+                        <li><a href="#products"
+                                class="text-gray-400 hover:text-yellow-500 transition-colors">Products</a>
                         </li>
                         <li><a href="#gallery" class="text-gray-400 hover:text-yellow-500 transition-colors">Gallery</a>
                         </li>
@@ -1182,7 +2044,7 @@
                         </li>
                     </ul>
                 </div>
-    
+
                 <!-- Contact Information -->
                 <div>
                     <h3 class="font-bold mb-4">Contact Us</h3>
@@ -1218,7 +2080,7 @@
                         </li>
                     </ul>
                 </div>
-    
+
                 <!-- Business Hours -->
                 <div>
                     <h3 class="font-bold mb-4">Business Hours</h3>
@@ -1238,10 +2100,10 @@
                     </ul>
                 </div>
             </div>
-    
+
             <!-- Copyright -->
             <div class="mt-12 pt-8 border-t border-yellow-500/20 text-center text-gray-400">
-                <p>© 2024 KustomSigns. All rights reserved. | Designed with ❤️ in Design City</p>
+                <p>© 2024 KustomSigns. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1478,117 +2340,120 @@
     </script>
 
     <script>
-        // Gallery Tab Functionality
-        const galleryTabs = document.querySelectorAll('.gallery-tab');
-        const galleryCards = document.querySelectorAll('.gallery-card');
-        const galleryGrid = document.getElementById('gallery-grid');
+        document.addEventListener('DOMContentLoaded', function () {
+            // Select elements only from the gallery section
+            const gallerySection = document.querySelector('section#gallery');
 
-        galleryTabs.forEach(tab => {
-            tab.addEventListener('click', () => {
+            // Only proceed if gallery section exists
+            if (!gallerySection) return;
+
+            const galleryTabs = gallerySection.querySelectorAll('.gallery-tab');
+            const galleryItems = gallerySection.querySelectorAll('.gallery-item');
+
+            // Function to set active tab style
+            function setActiveTab(tab) {
                 // Remove active class from all tabs
-                galleryTabs.forEach(t => t.classList.remove('active'));
+                galleryTabs.forEach(t => {
+                    t.classList.remove('bg-yellow-500', 'text-white');
+                    t.classList.add('bg-white', 'text-gray-700');
+                });
 
-                // Add active class to the clicked tab
-                tab.classList.add('active');
+                // Add active class to selected tab
+                tab.classList.remove('bg-white', 'text-gray-700');
+                tab.classList.add('bg-yellow-500', 'text-white');
+            }
 
-                // Get the filter attribute value
-                const filter = tab.dataset.filter;
+            // Add click event listeners to tabs
+            galleryTabs.forEach(tab => {
+                tab.addEventListener('click', function (e) {
+                    // Prevent default behavior
+                    e.preventDefault();
 
-                // Animate Out
-                gsap.to(galleryCards, {
-                    opacity: 0,
-                    y: 20,
-                    duration: 0.3,
-                    stagger: 0.05,
-                    onComplete: () => {
-                        // Hide all cards
-                        galleryCards.forEach(card => {
-                            card.style.display = 'none';
-                        });
+                    // Set this tab as active
+                    setActiveTab(this);
 
-                        // Show filtered cards
-                        const filteredCards = filter === 'all' ? galleryCards : document.querySelectorAll(`.gallery-card[data-category="${filter}"]`);
-                        filteredCards.forEach(card => {
-                            card.style.display = 'block';
-                        });
+                    // Get filter value
+                    const filterValue = this.getAttribute('data-filter');
 
-                        // Animate In
-                        gsap.fromTo(filteredCards, {
-                            opacity: 0,
-                            y: -20
-                        }, {
-                            opacity: 1,
-                            y: 0,
-                            duration: 0.3,
-                            stagger: 0.05,
-                            clearProps: "all"  // Important to clear initial settings
-                        });
-                    }
+                    // Show items based on category
+                    showCategory(filterValue);
                 });
             });
-        });
 
-        // Initialize
-        galleryTabs[0].click();
-    </script>
+            // Make first tab active by default
+            if (galleryTabs.length > 0) {
+                setActiveTab(galleryTabs[0]);
+            }
 
-    <script>
-        // Contact section header animations
-        ScrollTrigger.batch("#contact .text-gold, #contact .text-4xl", {
-            onEnter: (elements) => {
-                gsap.from(elements, {
-                    opacity: 0,
-                    y: 60,
-                    stagger: 0.2,
-                    duration: 1,
-                    ease: "power3.out"
+            // Initialize - show only "all" items first
+            showCategory('all');
+
+            // Function to show items based on category
+            function showCategory(category) {
+                // Track items to show for batched processing
+                const itemsToShow = [];
+
+                // First, determine which items should be shown or hidden
+                galleryItems.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+                    const shouldShow = category === 'all' || itemCategory === category;
+
+                    if (shouldShow) {
+                        itemsToShow.push(item);
+                    } else if (!item.classList.contains('hidden')) {
+                        // Only handle hiding for currently visible items
+                        handleItemHide(item);
+                    }
                 });
-            },
-            start: "top 80%",
-        });
 
-        // Contact form animation
-        gsap.from("#contact form > div", {
-            opacity: 0,
-            x: -50,
-            duration: 0.8,
-            stagger: 0.2,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: "#contact form",
-                start: "top 80%",
-                toggleActions: "play none none reverse"
+                // Then handle showing items with a slight delay for visual effect
+                setTimeout(() => {
+                    itemsToShow.forEach((item, index) => {
+                        setTimeout(() => {
+                            handleItemShow(item);
+                        }, index * 50); // Stagger effect
+                    });
+                }, 410); // Slightly longer than hide transition
             }
-        });
 
-        // Contact info items animation (Location, Call, Email, Hours)
-        gsap.from("#contact .space-y-8 > div", {
-            opacity: 0,
-            x: 50,
-            duration: 0.8,
-            stagger: 0.2,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: "#contact .space-y-8",
-                start: "top 80%",
-                toggleActions: "play none none reverse"
+            function handleItemHide(item) {
+                // Fade out
+                item.classList.add('opacity-0');
+                item.style.transition = 'opacity 0.4s ease-out';
+
+                // Use a specific class name to track our transitions
+                item.classList.add('gallery-transition');
+
+                // Wait for animation to complete before hiding
+                setTimeout(() => {
+                    item.classList.add('hidden');
+                    item.classList.remove('gallery-transition');
+                }, 400);
             }
-        });
 
-        // Submit button animation
-        gsap.from("#contact form button", {
-            opacity: 1,
-            y: -5,
-            duration: 0.8,
-            delay: 0.6,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: "#contact form",
-                start: "top 80%",
-                toggleActions: "play none none reverse"
+            function handleItemShow(item) {
+                // Remove hidden class
+                item.classList.remove('hidden');
+
+                // Add transition class
+                item.classList.add('gallery-transition');
+
+                // Force a reflow to ensure the transition works
+                void item.offsetWidth;
+
+                // Set up transition and fade in
+                item.style.transition = 'opacity 0.5s ease-in';
+                item.classList.remove('opacity-0');
+
+                // Clean up after transition
+                setTimeout(() => {
+                    item.classList.remove('gallery-transition');
+                }, 500);
             }
         });
     </script>
+
+
     <script>
         function toggleAnswer(id, element) {
             const answer = document.getElementById(id);
@@ -1687,106 +2552,108 @@
 
     <script>
         const products = [
-                { name: 'LED Signs', description: 'Energy-efficient displays', image: 'led.png', fullDescription: 'Innovative LED signage solutions for dynamic brand communication.' },
-                { name: 'Channel Letters', description: 'Custom-made dimensional letters', image: 'channel.jpg', fullDescription: 'Custom-made dimensional letters designed to maximize brand visibility and create striking visual impact.' },
-                { name: 'Custom Banners', description: 'High-quality printed displays', image: 'custom.png', fullDescription: 'Versatile and eye-catching banners tailored to your brand needs.' }
-            ];
+            { name: 'LED Signs', description: 'Energy-efficient displays', image: 'https://lh3.googleusercontent.com/d/1vl1Xo4b38ougc618tJqcpUpMbMvQVN9I', fullDescription: 'Innovative LED signage solutions for dynamic brand communication.' },
+            { name: 'Channel Letters', description: 'Custom-made dimensional letters', image: 'https://lh3.googleusercontent.com/d/12TPlFGmuXXZJ_5BkTXWCD-UxQDBQ8q6W', fullDescription: 'Custom-made dimensional letters designed to maximize brand visibility and create striking visual impact.' },
+            { name: 'Custom Banners', description: 'High-quality printed displays', image: 'https://lh3.googleusercontent.com/d/1wj32RP3ufw8q_hYAb7jXmvgcy-sIo6sn', fullDescription: 'Versatile and eye-catching banners tailored to your brand needs.' }
+        ];
 
-            let productSequence = [2, 0, 1]; // Initial sequence: right, main, left
-            let isTransitioning = false;
+        let productSequence = [2, 0, 1]; // Initial sequence: right, main, left
+        let isTransitioning = false;
 
-            function initializeCarousel() {
-                const carouselContainer = document.getElementById('carouselContainer');
-                carouselContainer.style.position = 'relative';
-                carouselContainer.style.overflow = 'hidden';
-                carouselContainer.style.height = '500px';
+        function initializeCarousel() {
+            const carouselContainer = document.getElementById('carouselContainer');
+            carouselContainer.style.position = 'relative';
+            carouselContainer.style.overflow = 'hidden';
+            carouselContainer.style.height = '500px';
 
+            updateProductElements();
+            addClickListeners();
+        }
+
+        function updateProductElements() {
+            const leftProduct = document.getElementById('leftProduct');
+            const centerProduct = document.getElementById('centerProduct');
+            const rightProduct = document.getElementById('rightProduct');
+
+            // Assign product content
+            leftProduct.querySelector('img').src = products[productSequence[2]].image;
+            leftProduct.querySelector('h3').textContent = products[productSequence[2]].name;
+            leftProduct.querySelector('p').textContent = products[productSequence[2]].description;
+
+            centerProduct.querySelector('img').src = products[productSequence[1]].image;
+            centerProduct.querySelector('h3').textContent = products[productSequence[1]].name;
+            centerProduct.querySelector('p').textContent = products[productSequence[1]].fullDescription;
+
+            rightProduct.querySelector('img').src = products[productSequence[0]].image;
+            rightProduct.querySelector('h3').textContent = products[productSequence[0]].name;
+            rightProduct.querySelector('p').textContent = products[productSequence[0]].description;
+
+            // Set positions
+            leftProduct.style.position = centerProduct.style.position = rightProduct.style.position = 'absolute';
+            leftProduct.style.width = rightProduct.style.width = '30%';
+            centerProduct.style.width = '40%';
+
+            leftProduct.style.left = '0';
+            centerProduct.style.left = '30%';
+            rightProduct.style.right = '0';
+
+            leftProduct.style.opacity = rightProduct.style.opacity = '0.5';
+            centerProduct.style.opacity = '1';
+
+            leftProduct.style.zIndex = rightProduct.style.zIndex = '1';
+            centerProduct.style.zIndex = '10';
+        }
+
+        function animateSlide() {
+            if (isTransitioning) return;
+            isTransitioning = true;
+
+            const leftProduct = document.getElementById('leftProduct');
+            const centerProduct = document.getElementById('centerProduct');
+            const rightProduct = document.getElementById('rightProduct');
+
+            leftProduct.style.transition = centerProduct.style.transition = rightProduct.style.transition = 'all 0.5s ease';
+
+            leftProduct.style.left = '-30%';
+            centerProduct.style.left = '0';
+            rightProduct.style.right = '-30%';
+
+            setTimeout(() => {
+                productSequence = [productSequence[2], productSequence[0], productSequence[1]];
                 updateProductElements();
-                addClickListeners();
+                isTransitioning = false;
+            }, 500);
+        }
+
+        function selectProduct(index) {
+            if (isTransitioning || index === 1) return;
+            isTransitioning = true;
+
+            if (index === 2) { // Selecting left product
+                productSequence = [productSequence[2], productSequence[0], productSequence[1]];
+            } else if (index === 0) { // Selecting right product
+                productSequence = [productSequence[1], productSequence[2], productSequence[0]];
             }
 
-            function updateProductElements() {
-                const leftProduct = document.getElementById('leftProduct');
-                const centerProduct = document.getElementById('centerProduct');
-                const rightProduct = document.getElementById('rightProduct');
+            updateProductElements();
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 500);
+        }
 
-                // Assign product content
-                leftProduct.querySelector('img').src = products[productSequence[2]].image;
-                leftProduct.querySelector('h3').textContent = products[productSequence[2]].name;
-                leftProduct.querySelector('p').textContent = products[productSequence[2]].description;
+        function addClickListeners() {
+            document.getElementById('leftProduct').addEventListener('click', () => selectProduct(2));
+            document.getElementById('rightProduct').addEventListener('click', () => selectProduct(0));
+        }
 
-                centerProduct.querySelector('img').src = products[productSequence[1]].image;
-                centerProduct.querySelector('h3').textContent = products[productSequence[1]].name;
-                centerProduct.querySelector('p').textContent = products[productSequence[1]].fullDescription;
-
-                rightProduct.querySelector('img').src = products[productSequence[0]].image;
-                rightProduct.querySelector('h3').textContent = products[productSequence[0]].name;
-                rightProduct.querySelector('p').textContent = products[productSequence[0]].description;
-
-                // Set positions
-                leftProduct.style.position = centerProduct.style.position = rightProduct.style.position = 'absolute';
-                leftProduct.style.width = rightProduct.style.width = '30%';
-                centerProduct.style.width = '40%';
-
-                leftProduct.style.left = '0';
-                centerProduct.style.left = '30%';
-                rightProduct.style.right = '0';
-
-                leftProduct.style.opacity = rightProduct.style.opacity = '0.5';
-                centerProduct.style.opacity = '1';
-
-                leftProduct.style.zIndex = rightProduct.style.zIndex = '1';
-                centerProduct.style.zIndex = '10';
-            }
-
-            function animateSlide() {
-                if (isTransitioning) return;
-                isTransitioning = true;
-
-                const leftProduct = document.getElementById('leftProduct');
-                const centerProduct = document.getElementById('centerProduct');
-                const rightProduct = document.getElementById('rightProduct');
-
-                leftProduct.style.transition = centerProduct.style.transition = rightProduct.style.transition = 'all 0.5s ease';
-
-                leftProduct.style.left = '-30%';
-                centerProduct.style.left = '0';
-                rightProduct.style.right = '-30%';
-
-                setTimeout(() => {
-                    productSequence = [productSequence[2], productSequence[0], productSequence[1]];
-                    updateProductElements();
-                    isTransitioning = false;
-                }, 500);
-            }
-
-            function selectProduct(index) {
-                if (isTransitioning || index === 1) return;
-                isTransitioning = true;
-
-                if (index === 2) { // Selecting left product
-                    productSequence = [productSequence[2], productSequence[0], productSequence[1]];
-                } else if (index === 0) { // Selecting right product
-                    productSequence = [productSequence[1], productSequence[2], productSequence[0]];
-                }
-
-                updateProductElements();
-                setTimeout(() => {
-                    isTransitioning = false;
-                }, 500);
-            }
-
-            function addClickListeners() {
-                document.getElementById('leftProduct').addEventListener('click', () => selectProduct(2));
-                document.getElementById('rightProduct').addEventListener('click', () => selectProduct(0));
-            }
-
-            document.addEventListener('DOMContentLoaded', () => {
-                initializeCarousel();
-                setInterval(animateSlide, 3000);
-            });
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeCarousel();
+            setInterval(animateSlide, 3000);
+        });
 
     </script>
+
+
 </body>
 
 </html>
